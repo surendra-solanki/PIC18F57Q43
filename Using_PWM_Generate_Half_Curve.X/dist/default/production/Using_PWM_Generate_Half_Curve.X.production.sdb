@@ -1,0 +1,351 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"49 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"50 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"58
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"74
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"63 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/pwm1_16bit.c
+[v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
+"134
+[v _PWM1_16BIT_Enable PWM1_16BIT_Enable `(v  1 e 1 0 ]
+"144
+[v _PWM1_16BIT_WritePeriodRegister PWM1_16BIT_WritePeriodRegister `(v  1 e 1 0 ]
+"150
+[v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+"162
+[v _PWM1_16BIT_LoadBufferRegisters PWM1_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+"192
+[v _PWM1_16BIT_Slice1Output1_SetInterruptHandler PWM1_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"197
+[v _PWM1_16BIT_Slice1Output2_SetInterruptHandler PWM1_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"202
+[v _PWM1_16BIT_Period_SetInterruptHandler PWM1_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"207
+[v _PWM1_16BIT_Slice1Output1_DefaultInterruptHandler PWM1_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"213
+[v _PWM1_16BIT_Slice1Output2_DefaultInterruptHandler PWM1_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"219
+[v _PWM1_16BIT_Period_DefaultInterruptHandler PWM1_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Period_DefaultInterruptHandler ]
+"1280 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[v _PMD0 PMD0 `VEuc  1 e 1 @96 ]
+"1337
+[v _PMD1 PMD1 `VEuc  1 e 1 @97 ]
+"1399
+[v _PMD3 PMD3 `VEuc  1 e 1 @99 ]
+"1450
+[v _PMD4 PMD4 `VEuc  1 e 1 @100 ]
+"1506
+[v _PMD5 PMD5 `VEuc  1 e 1 @101 ]
+"1557
+[v _PMD6 PMD6 `VEuc  1 e 1 @102 ]
+"1619
+[v _PMD7 PMD7 `VEuc  1 e 1 @103 ]
+"1681
+[v _PMD8 PMD8 `VEuc  1 e 1 @104 ]
+"5140
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5210
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5350
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5390
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5448
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5650
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"9540
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @529 ]
+"12348
+[v _PWMIN0PPS PWMIN0PPS `VEuc  1 e 1 @599 ]
+"15474
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15606
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15738
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15870
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"39116
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"39178
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"39240
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"39302
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"39364
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"39612
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"39674
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"39736
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"39798
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"39860
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40108
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"40170
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"40232
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"40294
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"40356
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"40604
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"40666
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"40728
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"40790
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"40852
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"40914
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"40946
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"40984
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41016
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41048
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41149
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"41211
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"41273
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"41335
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"41397
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"44527
+[v _PWM1ERS PWM1ERS `VEuc  1 e 1 @1120 ]
+"44547
+[v _PWM1CLK PWM1CLK `VEuc  1 e 1 @1121 ]
+"44567
+[v _PWM1LDS PWM1LDS `VEuc  1 e 1 @1122 ]
+"44594
+[v _PWM1PRL PWM1PRL `VEuc  1 e 1 @1123 ]
+"44614
+[v _PWM1PRH PWM1PRH `VEuc  1 e 1 @1124 ]
+"44634
+[v _PWM1CPRE PWM1CPRE `VEuc  1 e 1 @1125 ]
+"44654
+[v _PWM1PIPOS PWM1PIPOS `VEuc  1 e 1 @1126 ]
+"44674
+[v _PWM1GIR PWM1GIR `VEuc  1 e 1 @1127 ]
+[s S141 . 1 `uc 1 S1P1IF 1 0 :1:0 
+`uc 1 S1P2IF 1 0 :1:1 
+]
+"44685
+[u S144 . 1 `S141 1 . 1 0 ]
+"44685
+"44685
+[v _PWM1GIRbits PWM1GIRbits `VES144  1 e 1 @1127 ]
+"44700
+[v _PWM1GIE PWM1GIE `VEuc  1 e 1 @1128 ]
+[s S215 . 1 `uc 1 S1P1IE 1 0 :1:0 
+`uc 1 S1P2IE 1 0 :1:1 
+]
+"44711
+[u S218 . 1 `S215 1 . 1 0 ]
+"44711
+"44711
+[v _PWM1GIEbits PWM1GIEbits `VES218  1 e 1 @1128 ]
+"44726
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @1129 ]
+[s S200 . 1 `uc 1 ERSNOW 1 0 :1:0 
+`uc 1 ERSPOL 1 0 :1:1 
+`uc 1 LD 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"44740
+[u S206 . 1 `S200 1 . 1 0 ]
+"44740
+"44740
+[v _PWM1CONbits PWM1CONbits `VES206  1 e 1 @1129 ]
+"44765
+[v _PWM1S1CFG PWM1S1CFG `VEuc  1 e 1 @1130 ]
+"44831
+[v _PWM1S1P1L PWM1S1P1L `VEuc  1 e 1 @1131 ]
+"44851
+[v _PWM1S1P1H PWM1S1P1H `VEuc  1 e 1 @1132 ]
+"44878
+[v _PWM1S1P2L PWM1S1P2L `VEuc  1 e 1 @1133 ]
+"44898
+[v _PWM1S1P2H PWM1S1P2H `VEuc  1 e 1 @1134 ]
+[s S150 . 1 `uc 1 U1RXIE 1 0 :1:0 
+`uc 1 U1TXIE 1 0 :1:1 
+`uc 1 U1EIE 1 0 :1:2 
+`uc 1 U1IE 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIE 1 0 :1:6 
+`uc 1 PWM1IE 1 0 :1:7 
+]
+"46001
+[u S158 . 1 `S150 1 . 1 0 ]
+"46001
+"46001
+[v _PIE4bits PIE4bits `VES158  1 e 1 @1186 ]
+[s S122 . 1 `uc 1 U1RXIF 1 0 :1:0 
+`uc 1 U1TXIF 1 0 :1:1 
+`uc 1 U1EIF 1 0 :1:2 
+`uc 1 U1IF 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIF 1 0 :1:6 
+`uc 1 PWM1IF 1 0 :1:7 
+]
+"46875
+[u S130 . 1 `S122 1 . 1 0 ]
+"46875
+"46875
+[v _PIR4bits PIR4bits `VES130  1 e 1 @1202 ]
+"47512
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"47574
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+"47636
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+"47698
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+"47760
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"47792
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"47854
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"47916
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"47978
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+"48040
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"48102
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"48134
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+"56 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/pwm1_16bit.c
+[v _PWM1_16BIT_Slice1Output1_InterruptHandler PWM1_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output1_InterruptHandler ]
+"57
+[v _PWM1_16BIT_Slice1Output2_InterruptHandler PWM1_16BIT_Slice1Output2_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output2_InterruptHandler ]
+"58
+[v _PWM1_16BIT_Period_InterruptHandler PWM1_16BIT_Period_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Period_InterruptHandler ]
+"49 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"135
+[v main@i i `i  1 a 2 202 ]
+"78
+[v main@value value `[100]i  1 a 200 0 ]
+"64
+[v main@periodCount periodCount `i  1 a 2 200 ]
+[v main@F17038 F17038 `[100]i  1 s 200 F17038 ]
+"145
+} 0
+"50 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"63 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/pwm1_16bit.c
+[v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"132
+} 0
+"197
+[v _PWM1_16BIT_Slice1Output2_SetInterruptHandler PWM1_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"200
+} 0
+"192
+[v _PWM1_16BIT_Slice1Output1_SetInterruptHandler PWM1_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"195
+} 0
+"202
+[v _PWM1_16BIT_Period_SetInterruptHandler PWM1_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"205
+} 0
+"74 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"55 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"144
+} 0
+"58 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"144 C:\Users\surendra\Documents\Arduino\Using_PWM_Generate_Half_Curve.X\mcc_generated_files/pwm1_16bit.c
+[v _PWM1_16BIT_WritePeriodRegister PWM1_16BIT_WritePeriodRegister `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_WritePeriodRegister@periodCount periodCount `us  1 p 2 0 ]
+"148
+} 0
+"150
+[v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue registerValue `us  1 p 2 0 ]
+"154
+} 0
+"162
+[v _PWM1_16BIT_LoadBufferRegisters PWM1_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+{
+"166
+} 0
+"134
+[v _PWM1_16BIT_Enable PWM1_16BIT_Enable `(v  1 e 1 0 ]
+{
+"137
+} 0

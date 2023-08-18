@@ -1,0 +1,2094 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"67 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/examples/i2c1_master_example.c
+[e E355 . `uc
+I2C1_NOERR 0
+I2C1_BUSY 1
+I2C1_FAIL 2
+]
+"68
+[e E360 . `uc
+I2C1_STOP 1
+I2C1_RESTART_READ 2
+I2C1_RESTART_WRITE 3
+I2C1_CONTINUE 4
+I2C1_RESET_LINK 5
+]
+"79 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/spi1.c
+[e E355 . `uc
+SPI1_DEFAULT 0
+]
+"113 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/adcc.c
+[e E16691 . `uc
+AIP0 1
+channel_VSS 59
+channel_Temp 60
+channel_DAC1 61
+channel_FVR_Buffer1 62
+channel_FVR_Buffer2 63
+]
+"159 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/i2c1_master.c
+[e E17079 . `uc
+I2C1_IDLE 0
+I2C1_SEND_ADR_READ 1
+I2C1_SEND_ADR_WRITE 2
+I2C1_TX 3
+I2C1_RX 4
+I2C1_TX_EMPTY 5
+I2C1_RX_EMPTY 6
+I2C1_SEND_RESTART_READ 7
+I2C1_SEND_RESTART_WRITE 8
+I2C1_SEND_RESTART 9
+I2C1_SEND_STOP 10
+I2C1_RX_ACK 11
+I2C1_TX_ACK 12
+I2C1_RX_NACK_STOP 13
+I2C1_RX_NACK_RESTART 14
+I2C1_RESET 15
+I2C1_ADDRESS_NACK 16
+I2C1_BUS_COLLISION 17
+I2C1_BUS_ERROR 18
+]
+"181
+[e E360 . `uc
+I2C1_STOP 1
+I2C1_RESTART_READ 2
+I2C1_RESTART_WRITE 3
+I2C1_CONTINUE 4
+I2C1_RESET_LINK 5
+]
+[e E355 . `uc
+I2C1_NOERR 0
+I2C1_BUSY 1
+I2C1_FAIL 2
+]
+"219
+[e E17100 . `uc
+I2C1_DATA_COMPLETE 0
+I2C1_WRITE_COLLISION 1
+I2C1_ADDR_NACK 2
+I2C1_DATA_NACK 3
+I2C1_TIMEOUT 4
+I2C1_NULL 5
+]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"49 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"62 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/dac1.c
+[v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
+"142 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/examples/i2c1_master_example.c
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+"149
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+"156
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+"163
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+"170
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+"34 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/ext_int.c
+[v _INT0_ISR INT0_ISR `(v  1 e 1 0 ]
+"43
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+"52
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+"56
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"60
+[v _INT1_ISR INT1_ISR `(v  1 e 1 0 ]
+"69
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"78
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"82
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"86
+[v _INT2_ISR INT2_ISR `(v  1 e 1 0 ]
+"95
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+"104
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+"108
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"113
+[v _EXT_INT_Initialize EXT_INT_Initialize `(v  1 e 1 0 ]
+"183 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+"204
+[v _I2C1_Open I2C1_Open `(E355  1 e 1 0 ]
+"237
+[v _I2C1_Close I2C1_Close `(E355  1 e 1 0 ]
+"252
+[v _I2C1_MasterOperation I2C1_MasterOperation `(E355  1 e 1 0 ]
+"276
+[v _I2C1_MasterRead I2C1_MasterRead `(E355  1 e 1 0 ]
+"281
+[v _I2C1_MasterWrite I2C1_MasterWrite `(E355  1 e 1 0 ]
+"293
+[v _I2C1_SetBuffer I2C1_SetBuffer `(v  1 e 1 0 ]
+"303
+[v _I2C1_SetDataCompleteCallback I2C1_SetDataCompleteCallback `(v  1 e 1 0 ]
+"313
+[v _I2C1_SetAddressNackCallback I2C1_SetAddressNackCallback `(v  1 e 1 0 ]
+"328
+[v _I2C1_SetCallback I2C1_SetCallback `(v  1 s 1 I2C1_SetCallback ]
+"342
+[v _I2C1_Poller I2C1_Poller `(v  1 s 1 I2C1_Poller ]
+"351
+[v _I2C1_MasterFsm I2C1_MasterFsm `T(v  1 s 1 I2C1_MasterFsm ]
+"362
+[v _I2C1_ClearInterruptFlags I2C1_ClearInterruptFlags `T(v  1 s 1 I2C1_ClearInterruptFlags ]
+"378
+[v _I2C1_DO_IDLE I2C1_DO_IDLE `(E17079  1 s 1 I2C1_DO_IDLE ]
+"385
+[v _I2C1_DO_SEND_ADR_READ I2C1_DO_SEND_ADR_READ `(E17079  1 s 1 I2C1_DO_SEND_ADR_READ ]
+"396
+[v _I2C1_DO_SEND_ADR_WRITE I2C1_DO_SEND_ADR_WRITE `(E17079  1 s 1 I2C1_DO_SEND_ADR_WRITE ]
+"403
+[v _I2C1_DO_TX I2C1_DO_TX `(E17079  1 s 1 I2C1_DO_TX ]
+"436
+[v _I2C1_DO_RX I2C1_DO_RX `(E17079  1 s 1 I2C1_DO_RX ]
+"460
+[v _I2C1_DO_TX_EMPTY I2C1_DO_TX_EMPTY `(E17079  1 s 1 I2C1_DO_TX_EMPTY ]
+"479
+[v _I2C1_DO_RX_EMPTY I2C1_DO_RX_EMPTY `(E17079  1 s 1 I2C1_DO_RX_EMPTY ]
+"504
+[v _I2C1_DO_SEND_RESTART_READ I2C1_DO_SEND_RESTART_READ `(E17079  1 s 1 I2C1_DO_SEND_RESTART_READ ]
+"510
+[v _I2C1_DO_SEND_RESTART_WRITE I2C1_DO_SEND_RESTART_WRITE `(E17079  1 s 1 I2C1_DO_SEND_RESTART_WRITE ]
+"516
+[v _I2C1_DO_SEND_RESTART I2C1_DO_SEND_RESTART `(E17079  1 s 1 I2C1_DO_SEND_RESTART ]
+"521
+[v _I2C1_DO_SEND_STOP I2C1_DO_SEND_STOP `(E17079  1 s 1 I2C1_DO_SEND_STOP ]
+"532
+[v _I2C1_DO_RX_ACK I2C1_DO_RX_ACK `(E17079  1 s 1 I2C1_DO_RX_ACK ]
+"538
+[v _I2C1_DO_TX_ACK I2C1_DO_TX_ACK `(E17079  1 s 1 I2C1_DO_TX_ACK ]
+"544
+[v _I2C1_DO_RX_NACK_STOP I2C1_DO_RX_NACK_STOP `(E17079  1 s 1 I2C1_DO_RX_NACK_STOP ]
+"551
+[v _I2C1_DO_RX_NACK_RESTART I2C1_DO_RX_NACK_RESTART `(E17079  1 s 1 I2C1_DO_RX_NACK_RESTART ]
+"557
+[v _I2C1_DO_RESET I2C1_DO_RESET `(E17079  1 s 1 I2C1_DO_RESET ]
+"564
+[v _I2C1_DO_ADDRESS_NACK I2C1_DO_ADDRESS_NACK `(E17079  1 s 1 I2C1_DO_ADDRESS_NACK ]
+"579
+[v _I2C1_DO_BUS_COLLISION I2C1_DO_BUS_COLLISION `(E17079  1 s 1 I2C1_DO_BUS_COLLISION ]
+"595
+[v _I2C1_DO_BUS_ERROR I2C1_DO_BUS_ERROR `(E17079  1 s 1 I2C1_DO_BUS_ERROR ]
+"609
+[v _I2C1_CallbackReturnStop I2C1_CallbackReturnStop `(E360  1 e 1 0 ]
+"614
+[v _I2C1_CallbackReturnReset I2C1_CallbackReturnReset `(E360  1 e 1 0 ]
+"632
+[v _I2C1_MasterOpen I2C1_MasterOpen `T(a  1 s 1 I2C1_MasterOpen ]
+"655
+[v _I2C1_MasterClose I2C1_MasterClose `T(v  1 s 1 I2C1_MasterClose ]
+"665
+[v _I2C1_MasterGetRxData I2C1_MasterGetRxData `T(uc  1 s 1 I2C1_MasterGetRxData ]
+"670
+[v _I2C1_MasterSendTxData I2C1_MasterSendTxData `T(v  1 s 1 I2C1_MasterSendTxData ]
+"675
+[v _I2C1_MasterGetCounter I2C1_MasterGetCounter `T(uc  1 s 1 I2C1_MasterGetCounter ]
+"680
+[v _I2C1_MasterSetCounter I2C1_MasterSetCounter `T(v  1 s 1 I2C1_MasterSetCounter ]
+"685
+[v _I2C1_MasterResetBus I2C1_MasterResetBus `T(v  1 s 1 I2C1_MasterResetBus ]
+"695
+[v _I2C1_MasterEnableRestart I2C1_MasterEnableRestart `T(v  1 s 1 I2C1_MasterEnableRestart ]
+"701
+[v _I2C1_MasterDisableRestart I2C1_MasterDisableRestart `T(v  1 s 1 I2C1_MasterDisableRestart ]
+"707
+[v _I2C1_MasterStop I2C1_MasterStop `T(v  1 s 1 I2C1_MasterStop ]
+"713
+[v _I2C1_MasterIsNack I2C1_MasterIsNack `T(a  1 s 1 I2C1_MasterIsNack ]
+"718
+[v _I2C1_MasterSendAck I2C1_MasterSendAck `T(v  1 s 1 I2C1_MasterSendAck ]
+"723
+[v _I2C1_MasterSendNack I2C1_MasterSendNack `T(v  1 s 1 I2C1_MasterSendNack ]
+"728
+[v _I2C1_MasterClearBusCollision I2C1_MasterClearBusCollision `T(v  1 s 1 I2C1_MasterClearBusCollision ]
+"735
+[v _I2C1_MasterIsRxBufFull I2C1_MasterIsRxBufFull `T(a  1 s 1 I2C1_MasterIsRxBufFull ]
+"740
+[v _I2C1_MasterIsTxBufEmpty I2C1_MasterIsTxBufEmpty `T(a  1 s 1 I2C1_MasterIsTxBufEmpty ]
+"745
+[v _I2C1_MasterIsStopFlagSet I2C1_MasterIsStopFlagSet `T(a  1 s 1 I2C1_MasterIsStopFlagSet ]
+"750
+[v _I2C1_MasterIsCountFlagSet I2C1_MasterIsCountFlagSet `T(a  1 s 1 I2C1_MasterIsCountFlagSet ]
+"755
+[v _I2C1_MasterIsNackFlagSet I2C1_MasterIsNackFlagSet `T(a  1 s 1 I2C1_MasterIsNackFlagSet ]
+"760
+[v _I2C1_MasterClearStopFlag I2C1_MasterClearStopFlag `T(v  1 s 1 I2C1_MasterClearStopFlag ]
+"765
+[v _I2C1_MasterClearCountFlag I2C1_MasterClearCountFlag `T(v  1 s 1 I2C1_MasterClearCountFlag ]
+"770
+[v _I2C1_MasterClearNackFlag I2C1_MasterClearNackFlag `T(v  1 s 1 I2C1_MasterClearNackFlag ]
+"775
+[v _I2C1_MasterEnableIrq I2C1_MasterEnableIrq `T(v  1 s 1 I2C1_MasterEnableIrq ]
+"792
+[v _I2C1_MasterDisableIrq I2C1_MasterDisableIrq `T(v  1 s 1 I2C1_MasterDisableIrq ]
+"808
+[v _I2C1_MasterClearIrq I2C1_MasterClearIrq `T(v  1 s 1 I2C1_MasterClearIrq ]
+"813
+[v _I2C1_MasterWaitForEvent I2C1_MasterWaitForEvent `T(v  1 s 1 I2C1_MasterWaitForEvent ]
+"52 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"58
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+"50 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"69
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"85
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"63 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm1_16bit.c
+[v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
+"192
+[v _PWM1_16BIT_Slice1Output1_SetInterruptHandler PWM1_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"197
+[v _PWM1_16BIT_Slice1Output2_SetInterruptHandler PWM1_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"202
+[v _PWM1_16BIT_Period_SetInterruptHandler PWM1_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"207
+[v _PWM1_16BIT_Slice1Output1_DefaultInterruptHandler PWM1_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"213
+[v _PWM1_16BIT_Slice1Output2_DefaultInterruptHandler PWM1_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"219
+[v _PWM1_16BIT_Period_DefaultInterruptHandler PWM1_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Period_DefaultInterruptHandler ]
+"63 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm2_16bit.c
+[v _PWM2_16BIT_Initialize PWM2_16BIT_Initialize `(v  1 e 1 0 ]
+"192
+[v _PWM2_16BIT_Slice1Output1_SetInterruptHandler PWM2_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"197
+[v _PWM2_16BIT_Slice1Output2_SetInterruptHandler PWM2_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"202
+[v _PWM2_16BIT_Period_SetInterruptHandler PWM2_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"207
+[v _PWM2_16BIT_Slice1Output1_DefaultInterruptHandler PWM2_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"213
+[v _PWM2_16BIT_Slice1Output2_DefaultInterruptHandler PWM2_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"219
+[v _PWM2_16BIT_Period_DefaultInterruptHandler PWM2_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Period_DefaultInterruptHandler ]
+"63 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm3_16bit.c
+[v _PWM3_16BIT_Initialize PWM3_16BIT_Initialize `(v  1 e 1 0 ]
+"192
+[v _PWM3_16BIT_Slice1Output1_SetInterruptHandler PWM3_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"197
+[v _PWM3_16BIT_Slice1Output2_SetInterruptHandler PWM3_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"202
+[v _PWM3_16BIT_Period_SetInterruptHandler PWM3_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"207
+[v _PWM3_16BIT_Slice1Output1_DefaultInterruptHandler PWM3_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM3_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"213
+[v _PWM3_16BIT_Slice1Output2_DefaultInterruptHandler PWM3_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM3_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"219
+[v _PWM3_16BIT_Period_DefaultInterruptHandler PWM3_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM3_16BIT_Period_DefaultInterruptHandler ]
+"64 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"99
+[v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
+"60 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"66 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+"145
+[v _UART1_Read UART1_Read `(uc  1 e 1 0 ]
+"170
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+"193
+[v _UART1_DefaultFramingErrorHandler UART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"195
+[v _UART1_DefaultOverrunErrorHandler UART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"197
+[v _UART1_DefaultErrorHandler UART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"200
+[v _UART1_SetFramingErrorHandler UART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"204
+[v _UART1_SetOverrunErrorHandler UART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"208
+[v _UART1_SetErrorHandler UART1_SetErrorHandler `(v  1 e 1 0 ]
+"66 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/uart2.c
+[v _UART2_Initialize UART2_Initialize `(v  1 e 1 0 ]
+"174
+[v _UART2_DefaultFramingErrorHandler UART2_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"176
+[v _UART2_DefaultOverrunErrorHandler UART2_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"178
+[v _UART2_DefaultErrorHandler UART2_DefaultErrorHandler `(v  1 e 1 0 ]
+"181
+[v _UART2_SetFramingErrorHandler UART2_SetFramingErrorHandler `(v  1 e 1 0 ]
+"185
+[v _UART2_SetOverrunErrorHandler UART2_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"189
+[v _UART2_SetErrorHandler UART2_SetErrorHandler `(v  1 e 1 0 ]
+"1280 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[v _PMD0 PMD0 `VEuc  1 e 1 @96 ]
+"1337
+[v _PMD1 PMD1 `VEuc  1 e 1 @97 ]
+"1399
+[v _PMD3 PMD3 `VEuc  1 e 1 @99 ]
+"1450
+[v _PMD4 PMD4 `VEuc  1 e 1 @100 ]
+"1506
+[v _PMD5 PMD5 `VEuc  1 e 1 @101 ]
+"1557
+[v _PMD6 PMD6 `VEuc  1 e 1 @102 ]
+"1619
+[v _PMD7 PMD7 `VEuc  1 e 1 @103 ]
+"1681
+[v _PMD8 PMD8 `VEuc  1 e 1 @104 ]
+"3157
+[v _DAC1DATL DAC1DATL `VEuc  1 e 1 @125 ]
+"3235
+[v _DAC1CON DAC1CON `VEuc  1 e 1 @127 ]
+"3338
+[v _SPI1RXB SPI1RXB `VEuc  1 e 1 @128 ]
+"3408
+[v _SPI1TXB SPI1TXB `VEuc  1 e 1 @129 ]
+"3485
+[v _SPI1TCNTL SPI1TCNTL `VEuc  1 e 1 @130 ]
+"3525
+[v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @132 ]
+[s S1693 . 1 `uc 1 BMODE 1 0 :1:0 
+`uc 1 MST 1 0 :1:1 
+`uc 1 LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"3546
+[s S1699 . 1 `uc 1 SPI1BMODE 1 0 :1:0 
+`uc 1 SPI1MST 1 0 :1:1 
+`uc 1 SPI1LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 SPI1SPIEN 1 0 :1:7 
+]
+[u S1705 . 1 `S1693 1 . 1 0 `S1699 1 . 1 0 ]
+[v _SPI1CON0bits SPI1CON0bits `VES1705  1 e 1 @132 ]
+"3591
+[v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @133 ]
+"3693
+[v _SPI1CON2 SPI1CON2 `VEuc  1 e 1 @134 ]
+"3893
+[v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @137 ]
+"4147
+[v _SPI1CLK SPI1CLK `VEuc  1 e 1 @140 ]
+"5140
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5210
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5350
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5390
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5448
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5650
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"9148
+[v _RB1PPS RB1PPS `VEuc  1 e 1 @522 ]
+"9204
+[v _RB2PPS RB2PPS `VEuc  1 e 1 @523 ]
+"9764
+[v _RC4PPS RC4PPS `VEuc  1 e 1 @533 ]
+"9876
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @535 ]
+"9932
+[v _RC7PPS RC7PPS `VEuc  1 e 1 @536 ]
+"9988
+[v _RD0PPS RD0PPS `VEuc  1 e 1 @537 ]
+"10044
+[v _RD1PPS RD1PPS `VEuc  1 e 1 @538 ]
+"10324
+[v _RD6PPS RD6PPS `VEuc  1 e 1 @543 ]
+"10604
+[v _RF0PPS RF0PPS `VEuc  1 e 1 @553 ]
+"11052
+[v _INT0PPS INT0PPS `VEuc  1 e 1 @574 ]
+"11112
+[v _INT1PPS INT1PPS `VEuc  1 e 1 @575 ]
+"11178
+[v _INT2PPS INT2PPS `VEuc  1 e 1 @576 ]
+"11250
+[v _T0CKIPPS T0CKIPPS `VEuc  1 e 1 @577 ]
+"12348
+[v _PWMIN0PPS PWMIN0PPS `VEuc  1 e 1 @599 ]
+"14250
+[v _SPI1SCKPPS SPI1SCKPPS `VEuc  1 e 1 @618 ]
+"14316
+[v _SPI1SDIPPS SPI1SDIPPS `VEuc  1 e 1 @619 ]
+"14646
+[v _I2C1SDAPPS I2C1SDAPPS `VEuc  1 e 1 @624 ]
+"14712
+[v _I2C1SCLPPS I2C1SCLPPS `VEuc  1 e 1 @625 ]
+"14778
+[v _U1RXPPS U1RXPPS `VEuc  1 e 1 @626 ]
+"14922
+[v _U2RXPPS U2RXPPS `VEuc  1 e 1 @628 ]
+"15474
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15606
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15738
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15870
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"16002
+[v _I2C1RXB I2C1RXB `VEuc  1 e 1 @651 ]
+"16022
+[v _I2C1TXB I2C1TXB `VEuc  1 e 1 @652 ]
+"16042
+[v _I2C1CNT I2C1CNT `VEuc  1 e 1 @653 ]
+"16234
+[v _I2C1CON0 I2C1CON0 `VEuc  1 e 1 @660 ]
+[s S2528 . 1 `uc 1 MODE 1 0 :3:0 
+`uc 1 MDR 1 0 :1:3 
+`uc 1 CSTR 1 0 :1:4 
+`uc 1 S 1 0 :1:5 
+`uc 1 RSEN 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"16256
+[s S2535 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 I2CEN 1 0 :1:7 
+]
+[u S2541 . 1 `S2528 1 . 1 0 `S2535 1 . 1 0 ]
+[v _I2C1CON0bits I2C1CON0bits `VES2541  1 e 1 @660 ]
+"16311
+[v _I2C1CON1 I2C1CON1 `VEuc  1 e 1 @661 ]
+[s S2583 . 1 `uc 1 CSD 1 0 :1:0 
+`uc 1 TXU 1 0 :1:1 
+`uc 1 RXO 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ACKT 1 0 :1:4 
+`uc 1 ACKSTAT 1 0 :1:5 
+`uc 1 ACKDT 1 0 :1:6 
+`uc 1 ACKCNT 1 0 :1:7 
+]
+"16328
+[u S2592 . 1 `S2583 1 . 1 0 ]
+[v _I2C1CON1bits I2C1CON1bits `VES2592  1 e 1 @661 ]
+"16368
+[v _I2C1CON2 I2C1CON2 `VEuc  1 e 1 @662 ]
+"16444
+[v _I2C1ERR I2C1ERR `VEuc  1 e 1 @663 ]
+[s S2604 . 1 `uc 1 NACKIE 1 0 :1:0 
+`uc 1 BCLIE 1 0 :1:1 
+`uc 1 BTOIE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 NACKIF 1 0 :1:4 
+`uc 1 BCLIF 1 0 :1:5 
+`uc 1 BTOIF 1 0 :1:6 
+]
+"16469
+[s S2612 . 1 `uc 1 NACK1IE 1 0 :1:0 
+`uc 1 BCL1IE 1 0 :1:1 
+`uc 1 BTO1IE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 NACK1IF 1 0 :1:4 
+`uc 1 BCL1IF 1 0 :1:5 
+`uc 1 BTO1IF 1 0 :1:6 
+]
+[u S2620 . 1 `S2604 1 . 1 0 `S2612 1 . 1 0 ]
+[v _I2C1ERRbits I2C1ERRbits `VES2620  1 e 1 @663 ]
+[s S2560 . 1 `uc 1 RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 CLRBF 1 0 :1:2 
+`uc 1 RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 TXWE 1 0 :1:7 
+]
+"16641
+[u S2569 . 1 `S2560 1 . 1 0 ]
+[v _I2C1STAT1bits I2C1STAT1bits `VES2569  1 e 1 @665 ]
+"16671
+[v _I2C1PIR I2C1PIR `VEuc  1 e 1 @666 ]
+[s S2640 . 1 `uc 1 SCIF 1 0 :1:0 
+`uc 1 RSCIF 1 0 :1:1 
+`uc 1 PCIF 1 0 :1:2 
+`uc 1 ADRIF 1 0 :1:3 
+`uc 1 WRIF 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ACKTIF 1 0 :1:6 
+`uc 1 CNTIF 1 0 :1:7 
+]
+"16698
+[s S2649 . 1 `uc 1 SC1IF 1 0 :1:0 
+`uc 1 RSC1IF 1 0 :1:1 
+`uc 1 PC1IF 1 0 :1:2 
+`uc 1 ADR1IF 1 0 :1:3 
+`uc 1 WR1IF 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ACKT1IF 1 0 :1:6 
+`uc 1 CNT1IF 1 0 :1:7 
+]
+[u S2658 . 1 `S2640 1 . 1 0 `S2649 1 . 1 0 ]
+[v _I2C1PIRbits I2C1PIRbits `VES2658  1 e 1 @666 ]
+"16773
+[v _I2C1PIE I2C1PIE `VEuc  1 e 1 @667 ]
+[s S2692 . 1 `uc 1 SCIE 1 0 :1:0 
+`uc 1 RSCIE 1 0 :1:1 
+`uc 1 PCIE 1 0 :1:2 
+`uc 1 ADRIE 1 0 :1:3 
+`uc 1 WRIE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ACKTIE 1 0 :1:6 
+`uc 1 CNTIE 1 0 :1:7 
+]
+"16800
+[s S2701 . 1 `uc 1 SC1IE 1 0 :1:0 
+`uc 1 RSC1IE 1 0 :1:1 
+`uc 1 PC1IE 1 0 :1:2 
+`uc 1 ADR1IE 1 0 :1:3 
+`uc 1 WR1IE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ACKT1IE 1 0 :1:6 
+`uc 1 CNT1IE 1 0 :1:7 
+]
+[u S2710 . 1 `S2692 1 . 1 0 `S2701 1 . 1 0 ]
+[v _I2C1PIEbits I2C1PIEbits `VES2710  1 e 1 @667 ]
+"16875
+[v _I2C1CLK I2C1CLK `VEuc  1 e 1 @668 ]
+"17047
+[v _U1RXB U1RXB `VEuc  1 e 1 @673 ]
+"17105
+[v _U1TXB U1TXB `VEuc  1 e 1 @675 ]
+"17170
+[v _U1P1L U1P1L `VEuc  1 e 1 @677 ]
+"17190
+[v _U1P1H U1P1H `VEuc  1 e 1 @678 ]
+"17217
+[v _U1P2L U1P2L `VEuc  1 e 1 @679 ]
+"17237
+[v _U1P2H U1P2H `VEuc  1 e 1 @680 ]
+"17264
+[v _U1P3L U1P3L `VEuc  1 e 1 @681 ]
+"17284
+[v _U1P3H U1P3H `VEuc  1 e 1 @682 ]
+"17304
+[v _U1CON0 U1CON0 `VEuc  1 e 1 @683 ]
+[s S1284 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+]
+"17337
+[s S1289 . 1 `uc 1 U1MODE 1 0 :4:0 
+`uc 1 U1RXEN 1 0 :1:4 
+`uc 1 U1TXEN 1 0 :1:5 
+`uc 1 U1ABDEN 1 0 :1:6 
+`uc 1 U1BRGS 1 0 :1:7 
+]
+[s S1295 . 1 `uc 1 U1MODE0 1 0 :1:0 
+`uc 1 U1MODE1 1 0 :1:1 
+`uc 1 U1MODE2 1 0 :1:2 
+`uc 1 U1MODE3 1 0 :1:3 
+]
+[s S1300 . 1 `uc 1 MODE 1 0 :4:0 
+`uc 1 RXEN 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 ABDEN 1 0 :1:6 
+`uc 1 BRGS 1 0 :1:7 
+]
+[u S1306 . 1 `S1284 1 . 1 0 `S1289 1 . 1 0 `S1295 1 . 1 0 `S1300 1 . 1 0 ]
+[v _U1CON0bits U1CON0bits `VES1306  1 e 1 @683 ]
+"17432
+[v _U1CON1 U1CON1 `VEuc  1 e 1 @684 ]
+"17512
+[v _U1CON2 U1CON2 `VEuc  1 e 1 @685 ]
+"17661
+[v _U1BRGL U1BRGL `VEuc  1 e 1 @686 ]
+"17681
+[v _U1BRGH U1BRGH `VEuc  1 e 1 @687 ]
+"17701
+[v _U1FIFO U1FIFO `VEuc  1 e 1 @688 ]
+"17831
+[v _U1UIR U1UIR `VEuc  1 e 1 @689 ]
+"17887
+[v _U1ERRIR U1ERRIR `VEuc  1 e 1 @690 ]
+[s S1334 . 1 `uc 1 TXCIF 1 0 :1:0 
+`uc 1 RXFOIF 1 0 :1:1 
+`uc 1 RXBKIF 1 0 :1:2 
+`uc 1 FERIF 1 0 :1:3 
+`uc 1 CERIF 1 0 :1:4 
+`uc 1 ABDOVF 1 0 :1:5 
+`uc 1 PERIF 1 0 :1:6 
+`uc 1 TXMTIF 1 0 :1:7 
+]
+"17914
+[s S1343 . 1 `uc 1 U1TXCIF 1 0 :1:0 
+`uc 1 U1RXFOIF 1 0 :1:1 
+`uc 1 U1RXBKIF 1 0 :1:2 
+`uc 1 U1FERIF 1 0 :1:3 
+`uc 1 U1CERIF 1 0 :1:4 
+`uc 1 U1ABDOVF 1 0 :1:5 
+`uc 1 U1PERIF 1 0 :1:6 
+`uc 1 U1TXMTIF 1 0 :1:7 
+]
+[u S1352 . 1 `S1334 1 . 1 0 `S1343 1 . 1 0 ]
+[v _U1ERRIRbits U1ERRIRbits `VES1352  1 e 1 @690 ]
+"17999
+[v _U1ERRIE U1ERRIE `VEuc  1 e 1 @691 ]
+"18111
+[v _U2RXB U2RXB `VEuc  1 e 1 @692 ]
+"18149
+[v _U2TXB U2TXB `VEuc  1 e 1 @694 ]
+"18194
+[v _U2P1L U2P1L `VEuc  1 e 1 @696 ]
+"18221
+[v _U2P2L U2P2L `VEuc  1 e 1 @698 ]
+"18248
+[v _U2P3L U2P3L `VEuc  1 e 1 @700 ]
+"18268
+[v _U2CON0 U2CON0 `VEuc  1 e 1 @702 ]
+[s S1509 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+]
+"18299
+[s S1513 . 1 `uc 1 U2MODE 1 0 :4:0 
+`uc 1 U2RXEN 1 0 :1:4 
+`uc 1 U2TXEN 1 0 :1:5 
+`uc 1 U2ABDEN 1 0 :1:6 
+`uc 1 U2BRGS 1 0 :1:7 
+]
+[s S1519 . 1 `uc 1 U2MODE0 1 0 :1:0 
+`uc 1 U2MODE1 1 0 :1:1 
+`uc 1 U2MODE2 1 0 :1:2 
+]
+[u S1529 . 1 `S1509 1 . 1 0 `S1513 1 . 1 0 `S1519 1 . 1 0 `S1300 1 . 1 0 ]
+[v _U2CON0bits U2CON0bits `VES1529  1 e 1 @702 ]
+"18384
+[v _U2CON1 U2CON1 `VEuc  1 e 1 @703 ]
+"18464
+[v _U2CON2 U2CON2 `VEuc  1 e 1 @704 ]
+"18603
+[v _U2BRGL U2BRGL `VEuc  1 e 1 @705 ]
+"18623
+[v _U2BRGH U2BRGH `VEuc  1 e 1 @706 ]
+"18643
+[v _U2FIFO U2FIFO `VEuc  1 e 1 @707 ]
+"18773
+[v _U2UIR U2UIR `VEuc  1 e 1 @708 ]
+"18829
+[v _U2ERRIR U2ERRIR `VEuc  1 e 1 @709 ]
+"18856
+[s S1564 . 1 `uc 1 U2TXCIF 1 0 :1:0 
+`uc 1 U2RXFOIF 1 0 :1:1 
+`uc 1 U2RXBKIF 1 0 :1:2 
+`uc 1 U2FERIF 1 0 :1:3 
+`uc 1 U2CERIF 1 0 :1:4 
+`uc 1 U2ABDOVF 1 0 :1:5 
+`uc 1 U2PERIF 1 0 :1:6 
+`uc 1 U2TXMTIF 1 0 :1:7 
+]
+[u S1573 . 1 `S1334 1 . 1 0 `S1564 1 . 1 0 ]
+[v _U2ERRIRbits U2ERRIRbits `VES1573  1 e 1 @709 ]
+"18941
+[v _U2ERRIE U2ERRIE `VEuc  1 e 1 @710 ]
+"23298
+[v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
+"23436
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+"23690
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
+[s S686 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23718
+[s S692 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S698 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[u S704 . 1 `S686 1 . 1 0 `S692 1 . 1 0 `S698 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES704  1 e 1 @794 ]
+"23788
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
+"35199
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @985 ]
+"35327
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @986 ]
+"35462
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @987 ]
+"35590
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @988 ]
+"35725
+[v _ADERRL ADERRL `VEuc  1 e 1 @989 ]
+"35853
+[v _ADERRH ADERRH `VEuc  1 e 1 @990 ]
+"35988
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @991 ]
+"36116
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @992 ]
+"36251
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @993 ]
+"36379
+[v _ADFLTRH ADFLTRH `VEuc  1 e 1 @994 ]
+"36516
+[v _ADACCL ADACCL `VEuc  1 e 1 @995 ]
+"36644
+[v _ADACCH ADACCH `VEuc  1 e 1 @996 ]
+"36772
+[v _ADACCU ADACCU `VEuc  1 e 1 @997 ]
+"36900
+[v _ADCNT ADCNT `VEuc  1 e 1 @998 ]
+"37028
+[v _ADRPT ADRPT `VEuc  1 e 1 @999 ]
+"37163
+[v _ADPREVL ADPREVL `VEuc  1 e 1 @1000 ]
+"37291
+[v _ADPREVH ADPREVH `VEuc  1 e 1 @1001 ]
+"37426
+[v _ADRESL ADRESL `VEuc  1 e 1 @1002 ]
+"37554
+[v _ADRESH ADRESH `VEuc  1 e 1 @1003 ]
+"37674
+[v _ADPCH ADPCH `VEuc  1 e 1 @1004 ]
+"37739
+[v _ADACQL ADACQL `VEuc  1 e 1 @1006 ]
+"37867
+[v _ADACQH ADACQH `VEuc  1 e 1 @1007 ]
+"37959
+[v _ADCAP ADCAP `VEuc  1 e 1 @1008 ]
+"38018
+[v _ADPREL ADPREL `VEuc  1 e 1 @1009 ]
+"38146
+[v _ADPREH ADPREH `VEuc  1 e 1 @1010 ]
+"38238
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @1011 ]
+[s S1812 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM 1 0 :2:2 
+`uc 1 CS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CONT 1 0 :1:6 
+`uc 1 ON 1 0 :1:7 
+]
+"38276
+[s S1820 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+"38276
+[s S1828 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM0 1 0 :1:2 
+]
+"38276
+[s S1832 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+]
+"38276
+[s S1834 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+]
+"38276
+[u S1838 . 1 `S1812 1 . 1 0 `S1820 1 . 1 0 `S1828 1 . 1 0 `S1832 1 . 1 0 `S1834 1 . 1 0 ]
+"38276
+"38276
+[v _ADCON0bits ADCON0bits `VES1838  1 e 1 @1011 ]
+"38356
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @1012 ]
+[s S2052 . 1 `uc 1 DSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 GPOL 1 0 :1:5 
+`uc 1 IPEN 1 0 :1:6 
+`uc 1 PPOL 1 0 :1:7 
+]
+"38377
+[s S2058 . 1 `uc 1 ADDSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 ADGPOL 1 0 :1:5 
+`uc 1 ADIPEN 1 0 :1:6 
+`uc 1 ADPPOL 1 0 :1:7 
+]
+"38377
+[u S2064 . 1 `S2052 1 . 1 0 `S2058 1 . 1 0 ]
+"38377
+"38377
+[v _ADCON1bits ADCON1bits `VES2064  1 e 1 @1012 ]
+"38422
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @1013 ]
+[s S1928 . 1 `uc 1 MD 1 0 :3:0 
+`uc 1 ACLR 1 0 :1:3 
+`uc 1 CRS 1 0 :3:4 
+`uc 1 PSIS 1 0 :1:7 
+]
+"38459
+[s S1933 . 1 `uc 1 ADMD0 1 0 :1:0 
+`uc 1 ADMD1 1 0 :1:1 
+`uc 1 ADMD2 1 0 :1:2 
+`uc 1 ADACLR 1 0 :1:3 
+`uc 1 ADCRS0 1 0 :1:4 
+`uc 1 ADCRS1 1 0 :1:5 
+`uc 1 ADCRS2 1 0 :1:6 
+`uc 1 ADPSIS 1 0 :1:7 
+]
+"38459
+[s S1942 . 1 `uc 1 ADMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCRS 1 0 :3:4 
+]
+"38459
+[s S1946 . 1 `uc 1 MD0 1 0 :1:0 
+`uc 1 MD1 1 0 :1:1 
+`uc 1 MD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CRS0 1 0 :1:4 
+`uc 1 CRS1 1 0 :1:5 
+`uc 1 CRS2 1 0 :1:6 
+]
+"38459
+[u S1954 . 1 `S1928 1 . 1 0 `S1933 1 . 1 0 `S1942 1 . 1 0 `S1946 1 . 1 0 ]
+"38459
+"38459
+[v _ADCON2bits ADCON2bits `VES1954  1 e 1 @1013 ]
+"38564
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @1014 ]
+[s S1873 . 1 `uc 1 TMD 1 0 :3:0 
+`uc 1 SOI 1 0 :1:3 
+`uc 1 CALC 1 0 :3:4 
+]
+"38599
+[s S1877 . 1 `uc 1 ADTMD0 1 0 :1:0 
+`uc 1 ADTMD1 1 0 :1:1 
+`uc 1 ADTMD2 1 0 :1:2 
+`uc 1 ADSOI 1 0 :1:3 
+`uc 1 ADCALC0 1 0 :1:4 
+`uc 1 ADCALC1 1 0 :1:5 
+`uc 1 ADCALC2 1 0 :1:6 
+]
+"38599
+[s S1885 . 1 `uc 1 ADTMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCALC 1 0 :3:4 
+]
+"38599
+[s S1889 . 1 `uc 1 TMD0 1 0 :1:0 
+`uc 1 TMD1 1 0 :1:1 
+`uc 1 TMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CALC0 1 0 :1:4 
+`uc 1 CALC1 1 0 :1:5 
+`uc 1 CALC2 1 0 :1:6 
+]
+"38599
+[u S1897 . 1 `S1873 1 . 1 0 `S1877 1 . 1 0 `S1885 1 . 1 0 `S1889 1 . 1 0 ]
+"38599
+"38599
+[v _ADCON3bits ADCON3bits `VES1897  1 e 1 @1014 ]
+"38694
+[v _ADSTAT ADSTAT `VEuc  1 e 1 @1015 ]
+[s S1988 . 1 `uc 1 STAT 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 MATH 1 0 :1:4 
+`uc 1 LTHR 1 0 :1:5 
+`uc 1 UTHR 1 0 :1:6 
+`uc 1 AOV 1 0 :1:7 
+]
+"38731
+[s S1995 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+`uc 1 ADSTAT1 1 0 :1:1 
+`uc 1 ADSTAT2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADMATH 1 0 :1:4 
+`uc 1 ADLTHR 1 0 :1:5 
+`uc 1 ADUTHR 1 0 :1:6 
+`uc 1 ADAOV 1 0 :1:7 
+]
+"38731
+[s S2004 . 1 `uc 1 ADSTAT 1 0 :3:0 
+`uc 1 . 1 0 :4:3 
+`uc 1 ADOV 1 0 :1:7 
+]
+"38731
+[s S2008 . 1 `uc 1 STAT0 1 0 :1:0 
+`uc 1 STAT1 1 0 :1:1 
+`uc 1 STAT2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 OV 1 0 :1:7 
+]
+"38731
+[u S2014 . 1 `S1988 1 . 1 0 `S1995 1 . 1 0 `S2004 1 . 1 0 `S2008 1 . 1 0 ]
+"38731
+"38731
+[v _ADSTATbits ADSTATbits `VES2014  1 e 1 @1015 ]
+"38826
+[v _ADREF ADREF `VEuc  1 e 1 @1016 ]
+"38908
+[v _ADACT ADACT `VEuc  1 e 1 @1017 ]
+"39012
+[v _ADCLK ADCLK `VEuc  1 e 1 @1018 ]
+"39116
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"39178
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"39240
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"39302
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"39364
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"39612
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+[s S3065 . 1 `uc 1 ANSELB0 1 0 :1:0 
+`uc 1 ANSELB1 1 0 :1:1 
+`uc 1 ANSELB2 1 0 :1:2 
+`uc 1 ANSELB3 1 0 :1:3 
+`uc 1 ANSELB4 1 0 :1:4 
+`uc 1 ANSELB5 1 0 :1:5 
+`uc 1 ANSELB6 1 0 :1:6 
+`uc 1 ANSELB7 1 0 :1:7 
+]
+"39629
+[u S3074 . 1 `S3065 1 . 1 0 ]
+"39629
+"39629
+[v _ANSELBbits ANSELBbits `VES3074  1 e 1 @1032 ]
+"39674
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+[s S3023 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+"39691
+[u S3032 . 1 `S3023 1 . 1 0 ]
+"39691
+"39691
+[v _WPUBbits WPUBbits `VES3032  1 e 1 @1033 ]
+"39736
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+[s S3044 . 1 `uc 1 ODCB0 1 0 :1:0 
+`uc 1 ODCB1 1 0 :1:1 
+`uc 1 ODCB2 1 0 :1:2 
+`uc 1 ODCB3 1 0 :1:3 
+`uc 1 ODCB4 1 0 :1:4 
+`uc 1 ODCB5 1 0 :1:5 
+`uc 1 ODCB6 1 0 :1:6 
+`uc 1 ODCB7 1 0 :1:7 
+]
+"39753
+[u S3053 . 1 `S3044 1 . 1 0 ]
+"39753
+"39753
+[v _ODCONBbits ODCONBbits `VES3053  1 e 1 @1034 ]
+"39798
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"39860
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40108
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+[s S3182 . 1 `uc 1 ANSELC0 1 0 :1:0 
+`uc 1 ANSELC1 1 0 :1:1 
+`uc 1 ANSELC2 1 0 :1:2 
+`uc 1 ANSELC3 1 0 :1:3 
+`uc 1 ANSELC4 1 0 :1:4 
+`uc 1 ANSELC5 1 0 :1:5 
+`uc 1 ANSELC6 1 0 :1:6 
+`uc 1 ANSELC7 1 0 :1:7 
+]
+"40125
+[u S3191 . 1 `S3182 1 . 1 0 ]
+"40125
+"40125
+[v _ANSELCbits ANSELCbits `VES3191  1 e 1 @1040 ]
+"40170
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+[s S3140 . 1 `uc 1 WPUC0 1 0 :1:0 
+`uc 1 WPUC1 1 0 :1:1 
+`uc 1 WPUC2 1 0 :1:2 
+`uc 1 WPUC3 1 0 :1:3 
+`uc 1 WPUC4 1 0 :1:4 
+`uc 1 WPUC5 1 0 :1:5 
+`uc 1 WPUC6 1 0 :1:6 
+`uc 1 WPUC7 1 0 :1:7 
+]
+"40187
+[u S3149 . 1 `S3140 1 . 1 0 ]
+"40187
+"40187
+[v _WPUCbits WPUCbits `VES3149  1 e 1 @1041 ]
+"40232
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+[s S3161 . 1 `uc 1 ODCC0 1 0 :1:0 
+`uc 1 ODCC1 1 0 :1:1 
+`uc 1 ODCC2 1 0 :1:2 
+`uc 1 ODCC3 1 0 :1:3 
+`uc 1 ODCC4 1 0 :1:4 
+`uc 1 ODCC5 1 0 :1:5 
+`uc 1 ODCC6 1 0 :1:6 
+`uc 1 ODCC7 1 0 :1:7 
+]
+"40249
+[u S3170 . 1 `S3161 1 . 1 0 ]
+"40249
+"40249
+[v _ODCONCbits ODCONCbits `VES3170  1 e 1 @1042 ]
+"40294
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"40356
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"40604
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+[s S3308 . 1 `uc 1 ANSELD0 1 0 :1:0 
+`uc 1 ANSELD1 1 0 :1:1 
+`uc 1 ANSELD2 1 0 :1:2 
+`uc 1 ANSELD3 1 0 :1:3 
+`uc 1 ANSELD4 1 0 :1:4 
+`uc 1 ANSELD5 1 0 :1:5 
+`uc 1 ANSELD6 1 0 :1:6 
+`uc 1 ANSELD7 1 0 :1:7 
+]
+"40621
+[u S3317 . 1 `S3308 1 . 1 0 ]
+"40621
+"40621
+[v _ANSELDbits ANSELDbits `VES3317  1 e 1 @1048 ]
+"40666
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+[s S3266 . 1 `uc 1 WPUD0 1 0 :1:0 
+`uc 1 WPUD1 1 0 :1:1 
+`uc 1 WPUD2 1 0 :1:2 
+`uc 1 WPUD3 1 0 :1:3 
+`uc 1 WPUD4 1 0 :1:4 
+`uc 1 WPUD5 1 0 :1:5 
+`uc 1 WPUD6 1 0 :1:6 
+`uc 1 WPUD7 1 0 :1:7 
+]
+"40683
+[u S3275 . 1 `S3266 1 . 1 0 ]
+"40683
+"40683
+[v _WPUDbits WPUDbits `VES3275  1 e 1 @1049 ]
+"40728
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+[s S3287 . 1 `uc 1 ODCD0 1 0 :1:0 
+`uc 1 ODCD1 1 0 :1:1 
+`uc 1 ODCD2 1 0 :1:2 
+`uc 1 ODCD3 1 0 :1:3 
+`uc 1 ODCD4 1 0 :1:4 
+`uc 1 ODCD5 1 0 :1:5 
+`uc 1 ODCD6 1 0 :1:6 
+`uc 1 ODCD7 1 0 :1:7 
+]
+"40745
+[u S3296 . 1 `S3287 1 . 1 0 ]
+"40745
+"40745
+[v _ODCONDbits ODCONDbits `VES3296  1 e 1 @1050 ]
+"40790
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"40852
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"40914
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+[s S3388 . 1 `uc 1 ANSELE0 1 0 :1:0 
+`uc 1 ANSELE1 1 0 :1:1 
+`uc 1 ANSELE2 1 0 :1:2 
+]
+"40926
+[u S3392 . 1 `S3388 1 . 1 0 ]
+"40926
+"40926
+[v _ANSELEbits ANSELEbits `VES3392  1 e 1 @1056 ]
+"40946
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+[s S3364 . 1 `uc 1 WPUE0 1 0 :1:0 
+`uc 1 WPUE1 1 0 :1:1 
+`uc 1 WPUE2 1 0 :1:2 
+`uc 1 WPUE3 1 0 :1:3 
+]
+"40959
+[u S3369 . 1 `S3364 1 . 1 0 ]
+"40959
+"40959
+[v _WPUEbits WPUEbits `VES3369  1 e 1 @1057 ]
+"40984
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+[s S3377 . 1 `uc 1 ODCE0 1 0 :1:0 
+`uc 1 ODCE1 1 0 :1:1 
+`uc 1 ODCE2 1 0 :1:2 
+]
+"40996
+[u S3381 . 1 `S3377 1 . 1 0 ]
+"40996
+"40996
+[v _ODCONEbits ODCONEbits `VES3381  1 e 1 @1058 ]
+"41016
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41048
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41149
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+[s S3504 . 1 `uc 1 ANSELF0 1 0 :1:0 
+`uc 1 ANSELF1 1 0 :1:1 
+`uc 1 ANSELF2 1 0 :1:2 
+`uc 1 ANSELF3 1 0 :1:3 
+`uc 1 ANSELF4 1 0 :1:4 
+`uc 1 ANSELF5 1 0 :1:5 
+`uc 1 ANSELF6 1 0 :1:6 
+`uc 1 ANSELF7 1 0 :1:7 
+]
+"41166
+[u S3513 . 1 `S3504 1 . 1 0 ]
+"41166
+"41166
+[v _ANSELFbits ANSELFbits `VES3513  1 e 1 @1064 ]
+"41211
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+[s S3462 . 1 `uc 1 WPUF0 1 0 :1:0 
+`uc 1 WPUF1 1 0 :1:1 
+`uc 1 WPUF2 1 0 :1:2 
+`uc 1 WPUF3 1 0 :1:3 
+`uc 1 WPUF4 1 0 :1:4 
+`uc 1 WPUF5 1 0 :1:5 
+`uc 1 WPUF6 1 0 :1:6 
+`uc 1 WPUF7 1 0 :1:7 
+]
+"41228
+[u S3471 . 1 `S3462 1 . 1 0 ]
+"41228
+"41228
+[v _WPUFbits WPUFbits `VES3471  1 e 1 @1065 ]
+"41273
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+[s S3483 . 1 `uc 1 ODCF0 1 0 :1:0 
+`uc 1 ODCF1 1 0 :1:1 
+`uc 1 ODCF2 1 0 :1:2 
+`uc 1 ODCF3 1 0 :1:3 
+`uc 1 ODCF4 1 0 :1:4 
+`uc 1 ODCF5 1 0 :1:5 
+`uc 1 ODCF6 1 0 :1:6 
+`uc 1 ODCF7 1 0 :1:7 
+]
+"41290
+[u S3492 . 1 `S3483 1 . 1 0 ]
+"41290
+"41290
+[v _ODCONFbits ODCONFbits `VES3492  1 e 1 @1066 ]
+"41335
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"41397
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"44527
+[v _PWM1ERS PWM1ERS `VEuc  1 e 1 @1120 ]
+"44547
+[v _PWM1CLK PWM1CLK `VEuc  1 e 1 @1121 ]
+"44567
+[v _PWM1LDS PWM1LDS `VEuc  1 e 1 @1122 ]
+"44594
+[v _PWM1PRL PWM1PRL `VEuc  1 e 1 @1123 ]
+"44614
+[v _PWM1PRH PWM1PRH `VEuc  1 e 1 @1124 ]
+"44634
+[v _PWM1CPRE PWM1CPRE `VEuc  1 e 1 @1125 ]
+"44654
+[v _PWM1PIPOS PWM1PIPOS `VEuc  1 e 1 @1126 ]
+"44674
+[v _PWM1GIR PWM1GIR `VEuc  1 e 1 @1127 ]
+[s S191 . 1 `uc 1 S1P1IF 1 0 :1:0 
+`uc 1 S1P2IF 1 0 :1:1 
+]
+"44685
+[u S194 . 1 `S191 1 . 1 0 ]
+"44685
+"44685
+[v _PWM1GIRbits PWM1GIRbits `VES194  1 e 1 @1127 ]
+"44700
+[v _PWM1GIE PWM1GIE `VEuc  1 e 1 @1128 ]
+[s S265 . 1 `uc 1 S1P1IE 1 0 :1:0 
+`uc 1 S1P2IE 1 0 :1:1 
+]
+"44711
+[u S268 . 1 `S265 1 . 1 0 ]
+"44711
+"44711
+[v _PWM1GIEbits PWM1GIEbits `VES268  1 e 1 @1128 ]
+"44726
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @1129 ]
+[s S250 . 1 `uc 1 ERSNOW 1 0 :1:0 
+`uc 1 ERSPOL 1 0 :1:1 
+`uc 1 LD 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"44740
+[u S256 . 1 `S250 1 . 1 0 ]
+"44740
+"44740
+[v _PWM1CONbits PWM1CONbits `VES256  1 e 1 @1129 ]
+"44765
+[v _PWM1S1CFG PWM1S1CFG `VEuc  1 e 1 @1130 ]
+"44831
+[v _PWM1S1P1L PWM1S1P1L `VEuc  1 e 1 @1131 ]
+"44851
+[v _PWM1S1P1H PWM1S1P1H `VEuc  1 e 1 @1132 ]
+"44878
+[v _PWM1S1P2L PWM1S1P2L `VEuc  1 e 1 @1133 ]
+"44898
+[v _PWM1S1P2H PWM1S1P2H `VEuc  1 e 1 @1134 ]
+"44918
+[v _PWM2ERS PWM2ERS `VEuc  1 e 1 @1135 ]
+"44938
+[v _PWM2CLK PWM2CLK `VEuc  1 e 1 @1136 ]
+"44958
+[v _PWM2LDS PWM2LDS `VEuc  1 e 1 @1137 ]
+"44985
+[v _PWM2PRL PWM2PRL `VEuc  1 e 1 @1138 ]
+"45005
+[v _PWM2PRH PWM2PRH `VEuc  1 e 1 @1139 ]
+"45025
+[v _PWM2CPRE PWM2CPRE `VEuc  1 e 1 @1140 ]
+"45045
+[v _PWM2PIPOS PWM2PIPOS `VEuc  1 e 1 @1141 ]
+"45065
+[v _PWM2GIR PWM2GIR `VEuc  1 e 1 @1142 ]
+"45076
+"45076
+[v _PWM2GIRbits PWM2GIRbits `VES194  1 e 1 @1142 ]
+"45091
+[v _PWM2GIE PWM2GIE `VEuc  1 e 1 @1143 ]
+"45102
+"45102
+[v _PWM2GIEbits PWM2GIEbits `VES268  1 e 1 @1143 ]
+"45117
+[v _PWM2CON PWM2CON `VEuc  1 e 1 @1144 ]
+"45131
+"45131
+[v _PWM2CONbits PWM2CONbits `VES256  1 e 1 @1144 ]
+"45156
+[v _PWM2S1CFG PWM2S1CFG `VEuc  1 e 1 @1145 ]
+"45222
+[v _PWM2S1P1L PWM2S1P1L `VEuc  1 e 1 @1146 ]
+"45242
+[v _PWM2S1P1H PWM2S1P1H `VEuc  1 e 1 @1147 ]
+"45269
+[v _PWM2S1P2L PWM2S1P2L `VEuc  1 e 1 @1148 ]
+"45289
+[v _PWM2S1P2H PWM2S1P2H `VEuc  1 e 1 @1149 ]
+"45309
+[v _PWM3ERS PWM3ERS `VEuc  1 e 1 @1150 ]
+"45329
+[v _PWM3CLK PWM3CLK `VEuc  1 e 1 @1151 ]
+"45349
+[v _PWM3LDS PWM3LDS `VEuc  1 e 1 @1152 ]
+"45376
+[v _PWM3PRL PWM3PRL `VEuc  1 e 1 @1153 ]
+"45396
+[v _PWM3PRH PWM3PRH `VEuc  1 e 1 @1154 ]
+"45416
+[v _PWM3CPRE PWM3CPRE `VEuc  1 e 1 @1155 ]
+"45436
+[v _PWM3PIPOS PWM3PIPOS `VEuc  1 e 1 @1156 ]
+"45456
+[v _PWM3GIR PWM3GIR `VEuc  1 e 1 @1157 ]
+"45467
+"45467
+[v _PWM3GIRbits PWM3GIRbits `VES194  1 e 1 @1157 ]
+"45482
+[v _PWM3GIE PWM3GIE `VEuc  1 e 1 @1158 ]
+"45493
+"45493
+[v _PWM3GIEbits PWM3GIEbits `VES268  1 e 1 @1158 ]
+"45508
+[v _PWM3CON PWM3CON `VEuc  1 e 1 @1159 ]
+"45522
+"45522
+[v _PWM3CONbits PWM3CONbits `VES256  1 e 1 @1159 ]
+"45547
+[v _PWM3S1CFG PWM3S1CFG `VEuc  1 e 1 @1160 ]
+"45613
+[v _PWM3S1P1L PWM3S1P1L `VEuc  1 e 1 @1161 ]
+"45633
+[v _PWM3S1P1H PWM3S1P1H `VEuc  1 e 1 @1162 ]
+"45660
+[v _PWM3S1P2L PWM3S1P2L `VEuc  1 e 1 @1163 ]
+"45680
+[v _PWM3S1P2H PWM3S1P2H `VEuc  1 e 1 @1164 ]
+[s S514 . 1 `uc 1 INT0IE 1 0 :1:0 
+`uc 1 ZCDIE 1 0 :1:1 
+`uc 1 ADIE 1 0 :1:2 
+`uc 1 ACTIE 1 0 :1:3 
+`uc 1 C1IE 1 0 :1:4 
+`uc 1 SMT1IE 1 0 :1:5 
+`uc 1 SMT1PRAIE 1 0 :1:6 
+`uc 1 SMT1PWAIE 1 0 :1:7 
+]
+"45833
+[u S523 . 1 `S514 1 . 1 0 ]
+"45833
+"45833
+[v _PIE1bits PIE1bits `VES523  1 e 1 @1183 ]
+[s S200 . 1 `uc 1 U1RXIE 1 0 :1:0 
+`uc 1 U1TXIE 1 0 :1:1 
+`uc 1 U1EIE 1 0 :1:2 
+`uc 1 U1IE 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIE 1 0 :1:6 
+`uc 1 PWM1IE 1 0 :1:7 
+]
+"46001
+[u S208 . 1 `S200 1 . 1 0 ]
+"46001
+"46001
+[v _PIE4bits PIE4bits `VES208  1 e 1 @1186 ]
+[s S1080 . 1 `uc 1 SPI2RXIE 1 0 :1:0 
+`uc 1 SPI2TXIE 1 0 :1:1 
+`uc 1 SPI2IE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TMR3IE 1 0 :1:4 
+`uc 1 TMR3GIE 1 0 :1:5 
+`uc 1 PWM2PIE 1 0 :1:6 
+`uc 1 PWM2IE 1 0 :1:7 
+]
+"46053
+[u S1089 . 1 `S1080 1 . 1 0 ]
+"46053
+"46053
+[v _PIE5bits PIE5bits `VES1089  1 e 1 @1187 ]
+[s S535 . 1 `uc 1 INT1IE 1 0 :1:0 
+`uc 1 CLC2IE 1 0 :1:1 
+`uc 1 CWG1IE 1 0 :1:2 
+`uc 1 NCO1IE 1 0 :1:3 
+`uc 1 DMA2SCNTIE 1 0 :1:4 
+`uc 1 DMA2DCNTIE 1 0 :1:5 
+`uc 1 DMA2ORIE 1 0 :1:6 
+`uc 1 DMA2AIE 1 0 :1:7 
+]
+"46110
+[u S544 . 1 `S535 1 . 1 0 ]
+"46110
+"46110
+[v _PIE6bits PIE6bits `VES544  1 e 1 @1188 ]
+[s S797 . 1 `uc 1 I2C1RXIE 1 0 :1:0 
+`uc 1 I2C1TXIE 1 0 :1:1 
+`uc 1 I2C1IE 1 0 :1:2 
+`uc 1 I2C1EIE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC3IE 1 0 :1:5 
+`uc 1 PWM3PIE 1 0 :1:6 
+`uc 1 PWM3IE 1 0 :1:7 
+]
+"46172
+[u S806 . 1 `S797 1 . 1 0 ]
+"46172
+"46172
+[v _PIE7bits PIE7bits `VES806  1 e 1 @1189 ]
+[s S556 . 1 `uc 1 INT2IE 1 0 :1:0 
+`uc 1 CLC5IE 1 0 :1:1 
+`uc 1 CWG2IE 1 0 :1:2 
+`uc 1 NCO2IE 1 0 :1:3 
+`uc 1 DMA3SCNTIE 1 0 :1:4 
+`uc 1 DMA3DCNTIE 1 0 :1:5 
+`uc 1 DMA3ORIE 1 0 :1:6 
+`uc 1 DMA3AIE 1 0 :1:7 
+]
+"46336
+[u S565 . 1 `S556 1 . 1 0 ]
+"46336
+"46336
+[v _PIE10bits PIE10bits `VES565  1 e 1 @1192 ]
+[s S404 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ACTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"46707
+[u S413 . 1 `S404 1 . 1 0 ]
+"46707
+"46707
+[v _PIR1bits PIR1bits `VES413  1 e 1 @1199 ]
+[s S664 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"46814
+[u S673 . 1 `S664 1 . 1 0 ]
+"46814
+"46814
+[v _PIR3bits PIR3bits `VES673  1 e 1 @1201 ]
+[s S172 . 1 `uc 1 U1RXIF 1 0 :1:0 
+`uc 1 U1TXIF 1 0 :1:1 
+`uc 1 U1EIF 1 0 :1:2 
+`uc 1 U1IF 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIF 1 0 :1:6 
+`uc 1 PWM1IF 1 0 :1:7 
+]
+"46875
+[u S180 . 1 `S172 1 . 1 0 ]
+"46875
+"46875
+[v _PIR4bits PIR4bits `VES180  1 e 1 @1202 ]
+[s S1050 . 1 `uc 1 SPI2RXIF 1 0 :1:0 
+`uc 1 SPI2TXIF 1 0 :1:1 
+`uc 1 SPI2IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TMR3IF 1 0 :1:4 
+`uc 1 TMR3GIF 1 0 :1:5 
+`uc 1 PWM2PIF 1 0 :1:6 
+`uc 1 PWM2IF 1 0 :1:7 
+]
+"46927
+[u S1059 . 1 `S1050 1 . 1 0 ]
+"46927
+"46927
+[v _PIR5bits PIR5bits `VES1059  1 e 1 @1203 ]
+[s S432 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 CLC2IF 1 0 :1:1 
+`uc 1 CWG1IF 1 0 :1:2 
+`uc 1 NCO1IF 1 0 :1:3 
+`uc 1 DMA2SCNTIF 1 0 :1:4 
+`uc 1 DMA2DCNTIF 1 0 :1:5 
+`uc 1 DMA2ORIF 1 0 :1:6 
+`uc 1 DMA2AIF 1 0 :1:7 
+]
+"46984
+[u S441 . 1 `S432 1 . 1 0 ]
+"46984
+"46984
+[v _PIR6bits PIR6bits `VES441  1 e 1 @1204 ]
+[s S767 . 1 `uc 1 I2C1RXIF 1 0 :1:0 
+`uc 1 I2C1TXIF 1 0 :1:1 
+`uc 1 I2C1IF 1 0 :1:2 
+`uc 1 I2C1EIF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC3IF 1 0 :1:5 
+`uc 1 PWM3PIF 1 0 :1:6 
+`uc 1 PWM3IF 1 0 :1:7 
+]
+"47046
+[u S776 . 1 `S767 1 . 1 0 ]
+"47046
+"47046
+[v _PIR7bits PIR7bits `VES776  1 e 1 @1205 ]
+[s S1488 . 1 `uc 1 U2RXIF 1 0 :1:0 
+`uc 1 U2TXIF 1 0 :1:1 
+`uc 1 U2EIF 1 0 :1:2 
+`uc 1 U2IF 1 0 :1:3 
+`uc 1 TMR5IF 1 0 :1:4 
+`uc 1 TMR5GIF 1 0 :1:5 
+`uc 1 CCP2IF 1 0 :1:6 
+`uc 1 SCANIF 1 0 :1:7 
+]
+"47103
+[u S1497 . 1 `S1488 1 . 1 0 ]
+"47103
+"47103
+[v _PIR8bits PIR8bits `VES1497  1 e 1 @1206 ]
+[s S460 . 1 `uc 1 INT2IF 1 0 :1:0 
+`uc 1 CLC5IF 1 0 :1:1 
+`uc 1 CWG2IF 1 0 :1:2 
+`uc 1 NCO2IF 1 0 :1:3 
+`uc 1 DMA3SCNTIF 1 0 :1:4 
+`uc 1 DMA3DCNTIF 1 0 :1:5 
+`uc 1 DMA3ORIF 1 0 :1:6 
+`uc 1 DMA3AIF 1 0 :1:7 
+]
+"47210
+[u S469 . 1 `S460 1 . 1 0 ]
+"47210
+"47210
+[v _PIR10bits PIR10bits `VES469  1 e 1 @1208 ]
+"47512
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"47574
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+[s S2960 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"47591
+[u S2969 . 1 `S2960 1 . 1 0 ]
+"47591
+"47591
+[v _LATBbits LATBbits `VES2969  1 e 1 @1215 ]
+"47636
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+[s S3086 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"47653
+[u S3095 . 1 `S3086 1 . 1 0 ]
+"47653
+"47653
+[v _LATCbits LATCbits `VES3095  1 e 1 @1216 ]
+"47698
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+[s S3203 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"47715
+[u S3212 . 1 `S3203 1 . 1 0 ]
+"47715
+"47715
+[v _LATDbits LATDbits `VES3212  1 e 1 @1217 ]
+"47760
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+[s S3329 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"47772
+[u S3333 . 1 `S3329 1 . 1 0 ]
+"47772
+"47772
+[v _LATEbits LATEbits `VES3333  1 e 1 @1218 ]
+"47792
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+[s S3399 . 1 `uc 1 LATF0 1 0 :1:0 
+`uc 1 LATF1 1 0 :1:1 
+`uc 1 LATF2 1 0 :1:2 
+`uc 1 LATF3 1 0 :1:3 
+`uc 1 LATF4 1 0 :1:4 
+`uc 1 LATF5 1 0 :1:5 
+`uc 1 LATF6 1 0 :1:6 
+`uc 1 LATF7 1 0 :1:7 
+]
+"47809
+[u S3408 . 1 `S3399 1 . 1 0 ]
+"47809
+"47809
+[v _LATFbits LATFbits `VES3408  1 e 1 @1219 ]
+"47854
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"47916
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+[s S3002 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"47933
+[u S3011 . 1 `S3002 1 . 1 0 ]
+"47933
+"47933
+[v _TRISBbits TRISBbits `VES3011  1 e 1 @1223 ]
+"47978
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+[s S1670 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"47995
+[u S1679 . 1 `S1670 1 . 1 0 ]
+"47995
+"47995
+[v _TRISCbits TRISCbits `VES1679  1 e 1 @1224 ]
+"48040
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+[s S3245 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"48057
+[u S3254 . 1 `S3245 1 . 1 0 ]
+"48057
+"48057
+[v _TRISDbits TRISDbits `VES3254  1 e 1 @1225 ]
+"48102
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+[s S3353 . 1 `uc 1 TRISE0 1 0 :1:0 
+`uc 1 TRISE1 1 0 :1:1 
+`uc 1 TRISE2 1 0 :1:2 
+]
+"48114
+[u S3357 . 1 `S3353 1 . 1 0 ]
+"48114
+"48114
+[v _TRISEbits TRISEbits `VES3357  1 e 1 @1226 ]
+"48134
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+[s S3441 . 1 `uc 1 TRISF0 1 0 :1:0 
+`uc 1 TRISF1 1 0 :1:1 
+`uc 1 TRISF2 1 0 :1:2 
+`uc 1 TRISF3 1 0 :1:3 
+`uc 1 TRISF4 1 0 :1:4 
+`uc 1 TRISF5 1 0 :1:5 
+`uc 1 TRISF6 1 0 :1:6 
+`uc 1 TRISF7 1 0 :1:7 
+]
+"48151
+[u S3450 . 1 `S3441 1 . 1 0 ]
+"48151
+"48151
+[v _TRISFbits TRISFbits `VES3450  1 e 1 @1227 ]
+[s S2981 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"48275
+[u S2990 . 1 `S2981 1 . 1 0 ]
+"48275
+"48275
+[v _PORTBbits PORTBbits `VES2990  1 e 1 @1231 ]
+[s S3107 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"48337
+[u S3116 . 1 `S3107 1 . 1 0 ]
+"48337
+"48337
+[v _PORTCbits PORTCbits `VES3116  1 e 1 @1232 ]
+[s S3224 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"48399
+[u S3233 . 1 `S3224 1 . 1 0 ]
+"48399
+"48399
+[v _PORTDbits PORTDbits `VES3233  1 e 1 @1233 ]
+[s S3340 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+]
+"48457
+[u S3345 . 1 `S3340 1 . 1 0 ]
+"48457
+"48457
+[v _PORTEbits PORTEbits `VES3345  1 e 1 @1234 ]
+[s S3420 . 1 `uc 1 RF0 1 0 :1:0 
+`uc 1 RF1 1 0 :1:1 
+`uc 1 RF2 1 0 :1:2 
+`uc 1 RF3 1 0 :1:3 
+`uc 1 RF4 1 0 :1:4 
+`uc 1 RF5 1 0 :1:5 
+`uc 1 RF6 1 0 :1:6 
+`uc 1 RF7 1 0 :1:7 
+]
+"48499
+[u S3429 . 1 `S3420 1 . 1 0 ]
+"48499
+"48499
+[v _PORTFbits PORTFbits `VES3429  1 e 1 @1235 ]
+[s S488 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"48564
+[s S496 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"48564
+[u S499 . 1 `S488 1 . 1 0 `S496 1 . 1 0 ]
+"48564
+"48564
+[v _INTCON0bits INTCON0bits `VES499  1 e 1 @1238 ]
+"30 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/ext_int.c
+[v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
+"31
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
+"32
+[v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
+"159 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/i2c1_master.c
+[v _i2c1_fsmStateTable i2c1_fsmStateTable `C[19]*.38(E17079  1 e 57 0 ]
+[s S2314 . 42 `[6]*.38(E360 1 callbackTable 18 0 `[6]*.39v 1 callbackPayload 12 18 `us 1 time_out 2 30 `us 1 time_out_value 2 32 `uc 1 address 1 34 `*.39uc 1 data_ptr 2 35 `ui 1 data_length 2 37 `E17079 1 state 1 39 `E355 1 error 1 40 `uc 1 addressNackCheck 1 41 :2:0 
+`uc 1 busy 1 41 :1:2 
+`uc 1 inUse 1 41 :1:3 
+`uc 1 bufferFree 1 41 :1:4 
+]
+"181
+[v _I2C1_Status I2C1_Status `S2314  1 e 42 0 ]
+"56 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm1_16bit.c
+[v _PWM1_16BIT_Slice1Output1_InterruptHandler PWM1_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output1_InterruptHandler ]
+"57
+[v _PWM1_16BIT_Slice1Output2_InterruptHandler PWM1_16BIT_Slice1Output2_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output2_InterruptHandler ]
+"58
+[v _PWM1_16BIT_Period_InterruptHandler PWM1_16BIT_Period_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Period_InterruptHandler ]
+"56 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm2_16bit.c
+[v _PWM2_16BIT_Slice1Output1_InterruptHandler PWM2_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM2_16BIT_Slice1Output1_InterruptHandler ]
+"57
+[v _PWM2_16BIT_Slice1Output2_InterruptHandler PWM2_16BIT_Slice1Output2_InterruptHandler `*.38(v  1 s 3 PWM2_16BIT_Slice1Output2_InterruptHandler ]
+"58
+[v _PWM2_16BIT_Period_InterruptHandler PWM2_16BIT_Period_InterruptHandler `*.38(v  1 s 3 PWM2_16BIT_Period_InterruptHandler ]
+"56 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm3_16bit.c
+[v _PWM3_16BIT_Slice1Output1_InterruptHandler PWM3_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM3_16BIT_Slice1Output1_InterruptHandler ]
+"57
+[v _PWM3_16BIT_Slice1Output2_InterruptHandler PWM3_16BIT_Slice1Output2_InterruptHandler `*.38(v  1 s 3 PWM3_16BIT_Slice1Output2_InterruptHandler ]
+"58
+[v _PWM3_16BIT_Period_InterruptHandler PWM3_16BIT_Period_InterruptHandler `*.38(v  1 s 3 PWM3_16BIT_Period_InterruptHandler ]
+[s S1659 . 5 `uc 1 con0 1 0 `uc 1 con1 1 1 `uc 1 con2 1 2 `uc 1 baud 1 3 `uc 1 operation 1 4 ]
+"60 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/spi1.c
+[v _spi1_configuration spi1_configuration `C[1]S1659  1 s 5 spi1_configuration ]
+[s S1217 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"53 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/uart1.c
+[u S1222 . 1 `S1217 1 . 1 0 `uc 1 status 1 0 ]
+[v _uart1RxLastError uart1RxLastError `VES1222  1 s 1 uart1RxLastError ]
+"58
+[v _UART1_FramingErrorHandler UART1_FramingErrorHandler `*.38(v  1 e 3 0 ]
+"59
+[v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.38(v  1 e 3 0 ]
+"60
+[v _UART1_ErrorHandler UART1_ErrorHandler `*.38(v  1 e 3 0 ]
+"53 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/uart2.c
+[v _uart2RxLastError uart2RxLastError `VES1222  1 s 1 uart2RxLastError ]
+"58
+[v _UART2_FramingErrorHandler UART2_FramingErrorHandler `*.38(v  1 e 3 0 ]
+"59
+[v _UART2_OverrunErrorHandler UART2_OverrunErrorHandler `*.38(v  1 e 3 0 ]
+"60
+[v _UART2_ErrorHandler UART2_ErrorHandler `*.38(v  1 e 3 0 ]
+"49 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"70
+} 0
+"50 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"67
+} 0
+"66 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/uart2.c
+[v _UART2_Initialize UART2_Initialize `(v  1 e 1 0 ]
+{
+"115
+} 0
+"185
+[v _UART2_SetOverrunErrorHandler UART2_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v UART2_SetOverrunErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"187
+} 0
+"181
+[v _UART2_SetFramingErrorHandler UART2_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v UART2_SetFramingErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"183
+} 0
+"189
+[v _UART2_SetErrorHandler UART2_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v UART2_SetErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"191
+} 0
+"66 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+{
+"124
+} 0
+"204
+[v _UART1_SetOverrunErrorHandler UART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"206
+} 0
+"200
+[v _UART1_SetFramingErrorHandler UART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"202
+} 0
+"208
+[v _UART1_SetErrorHandler UART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"210
+} 0
+"60 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"78
+} 0
+"64 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"63 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm3_16bit.c
+[v _PWM3_16BIT_Initialize PWM3_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"132
+} 0
+"197
+[v _PWM3_16BIT_Slice1Output2_SetInterruptHandler PWM3_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM3_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"200
+} 0
+"192
+[v _PWM3_16BIT_Slice1Output1_SetInterruptHandler PWM3_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM3_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"195
+} 0
+"202
+[v _PWM3_16BIT_Period_SetInterruptHandler PWM3_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM3_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"205
+} 0
+"63 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm2_16bit.c
+[v _PWM2_16BIT_Initialize PWM2_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"132
+} 0
+"197
+[v _PWM2_16BIT_Slice1Output2_SetInterruptHandler PWM2_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"200
+} 0
+"192
+[v _PWM2_16BIT_Slice1Output1_SetInterruptHandler PWM2_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"195
+} 0
+"202
+[v _PWM2_16BIT_Period_SetInterruptHandler PWM2_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"205
+} 0
+"63 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pwm1_16bit.c
+[v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"132
+} 0
+"197
+[v _PWM1_16BIT_Slice1Output2_SetInterruptHandler PWM1_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"200
+} 0
+"192
+[v _PWM1_16BIT_Slice1Output1_SetInterruptHandler PWM1_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"195
+} 0
+"202
+[v _PWM1_16BIT_Period_SetInterruptHandler PWM1_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"205
+} 0
+"85 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"103
+} 0
+"55 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"162
+} 0
+"69 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"52 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"183 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+{
+"202
+} 0
+"113 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/ext_int.c
+[v _EXT_INT_Initialize EXT_INT_Initialize `(v  1 e 1 0 ]
+{
+"142
+} 0
+"104
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"106
+} 0
+"78
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"80
+} 0
+"52
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"54
+} 0
+"58 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/dac1.c
+[v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
+{
+"64
+} 0
+"62 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+{
+"111
+} 0
+"58 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+{
+"77
+} 0
+"86 C:\Users\surendra\Documents\PIC_Q43\SOM1_PICQ43.X\mcc_generated_files/ext_int.c
+[v _INT2_ISR INT2_ISR `(v  1 e 1 0 ]
+{
+"92
+} 0
+"95
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+{
+"102
+} 0
+"108
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"111
+} 0
+"60
+[v _INT1_ISR INT1_ISR `(v  1 e 1 0 ]
+{
+"66
+} 0
+"69
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+{
+"76
+} 0
+"82
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"85
+} 0
+"34
+[v _INT0_ISR INT0_ISR `(v  1 e 1 0 ]
+{
+"40
+} 0
+"43
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+{
+"50
+} 0
+"56
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"59
+} 0

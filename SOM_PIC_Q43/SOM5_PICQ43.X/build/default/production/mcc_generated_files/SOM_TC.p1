@@ -1,0 +1,173 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"100 mcc_generated_files/tmr0.h
+[; ;mcc_generated_files/tmr0.h: 100: void TMR0_Initialize(void);
+[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
+"129
+[; ;mcc_generated_files/tmr0.h: 129: void TMR0_StartTimer(void);
+[v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
+"161
+[; ;mcc_generated_files/tmr0.h: 161: void TMR0_StopTimer(void);
+[v _TMR0_StopTimer `(v ~T0 @X0 0 ef ]
+"196
+[; ;mcc_generated_files/tmr0.h: 196: uint8_t TMR0_ReadTimer(void);
+[v _TMR0_ReadTimer `(uc ~T0 @X0 0 ef ]
+"235
+[; ;mcc_generated_files/tmr0.h: 235: void TMR0_WriteTimer(uint8_t timerVal);
+[v _TMR0_WriteTimer `(v ~T0 @X0 0 ef1`uc ]
+"272
+[; ;mcc_generated_files/tmr0.h: 272: void TMR0_Reload(uint8_t periodVal);
+[v _TMR0_Reload `(v ~T0 @X0 0 ef1`uc ]
+"291
+[; ;mcc_generated_files/tmr0.h: 291: void TMR0_ISR(void);
+[v _TMR0_ISR `(v ~T0 @X0 0 ef ]
+"346
+[; ;mcc_generated_files/tmr0.h: 346: void TMR0_DefaultInterruptHandler(void);
+[v _TMR0_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
+"3 mcc_generated_files/SOM_TC.c
+[; ;mcc_generated_files/SOM_TC.c: 3: void SOM_TMR0_Initialize()
+[v _SOM_TMR0_Initialize `(v ~T0 @X0 1 ef ]
+"4
+[; ;mcc_generated_files/SOM_TC.c: 4: {
+{
+[e :U _SOM_TMR0_Initialize ]
+[f ]
+"5
+[; ;mcc_generated_files/SOM_TC.c: 5:     TMR0_Initialize();
+[e ( _TMR0_Initialize ..  ]
+"6
+[; ;mcc_generated_files/SOM_TC.c: 6: }
+[e :UE 1 ]
+}
+"8
+[; ;mcc_generated_files/SOM_TC.c: 8: void SOM_TMR0_StartTimer()
+[v _SOM_TMR0_StartTimer `(v ~T0 @X0 1 ef ]
+"9
+[; ;mcc_generated_files/SOM_TC.c: 9: {
+{
+[e :U _SOM_TMR0_StartTimer ]
+[f ]
+"10
+[; ;mcc_generated_files/SOM_TC.c: 10:     TMR0_StartTimer();
+[e ( _TMR0_StartTimer ..  ]
+"11
+[; ;mcc_generated_files/SOM_TC.c: 11: }
+[e :UE 2 ]
+}
+"13
+[; ;mcc_generated_files/SOM_TC.c: 13: void SOM_TMR0_StopTimer()
+[v _SOM_TMR0_StopTimer `(v ~T0 @X0 1 ef ]
+"14
+[; ;mcc_generated_files/SOM_TC.c: 14: {
+{
+[e :U _SOM_TMR0_StopTimer ]
+[f ]
+"15
+[; ;mcc_generated_files/SOM_TC.c: 15:     TMR0_StopTimer();
+[e ( _TMR0_StopTimer ..  ]
+"16
+[; ;mcc_generated_files/SOM_TC.c: 16: }
+[e :UE 3 ]
+}
+"18
+[; ;mcc_generated_files/SOM_TC.c: 18: uint8_t SOM_TMR0_ReadTimer()
+[v _SOM_TMR0_ReadTimer `(uc ~T0 @X0 1 ef ]
+"19
+[; ;mcc_generated_files/SOM_TC.c: 19: {
+{
+[e :U _SOM_TMR0_ReadTimer ]
+[f ]
+"20
+[; ;mcc_generated_files/SOM_TC.c: 20:     return TMR0_ReadTimer();
+[e ) ( _TMR0_ReadTimer ..  ]
+[e $UE 4  ]
+"21
+[; ;mcc_generated_files/SOM_TC.c: 21: }
+[e :UE 4 ]
+}
+"23
+[; ;mcc_generated_files/SOM_TC.c: 23: void SOM_TMR0_WriteTimer(uint8_t timerVal)
+[v _SOM_TMR0_WriteTimer `(v ~T0 @X0 1 ef1`uc ]
+"24
+[; ;mcc_generated_files/SOM_TC.c: 24: {
+{
+[e :U _SOM_TMR0_WriteTimer ]
+"23
+[; ;mcc_generated_files/SOM_TC.c: 23: void SOM_TMR0_WriteTimer(uint8_t timerVal)
+[v _timerVal `uc ~T0 @X0 1 r1 ]
+"24
+[; ;mcc_generated_files/SOM_TC.c: 24: {
+[f ]
+"25
+[; ;mcc_generated_files/SOM_TC.c: 25:     TMR0_WriteTimer(timerVal);
+[e ( _TMR0_WriteTimer (1 _timerVal ]
+"26
+[; ;mcc_generated_files/SOM_TC.c: 26: }
+[e :UE 5 ]
+}
+"28
+[; ;mcc_generated_files/SOM_TC.c: 28: void SOM_TMR0_Reload(uint8_t periodVal)
+[v _SOM_TMR0_Reload `(v ~T0 @X0 1 ef1`uc ]
+"29
+[; ;mcc_generated_files/SOM_TC.c: 29: {
+{
+[e :U _SOM_TMR0_Reload ]
+"28
+[; ;mcc_generated_files/SOM_TC.c: 28: void SOM_TMR0_Reload(uint8_t periodVal)
+[v _periodVal `uc ~T0 @X0 1 r1 ]
+"29
+[; ;mcc_generated_files/SOM_TC.c: 29: {
+[f ]
+"30
+[; ;mcc_generated_files/SOM_TC.c: 30:     TMR0_Reload(periodVal);
+[e ( _TMR0_Reload (1 _periodVal ]
+"31
+[; ;mcc_generated_files/SOM_TC.c: 31: }
+[e :UE 6 ]
+}
+"33
+[; ;mcc_generated_files/SOM_TC.c: 33: void SOM_TMR0_ISR()
+[v _SOM_TMR0_ISR `(v ~T0 @X0 1 ef ]
+"34
+[; ;mcc_generated_files/SOM_TC.c: 34: {
+{
+[e :U _SOM_TMR0_ISR ]
+[f ]
+"35
+[; ;mcc_generated_files/SOM_TC.c: 35:     TMR0_ISR();
+[e ( _TMR0_ISR ..  ]
+"36
+[; ;mcc_generated_files/SOM_TC.c: 36: }
+[e :UE 7 ]
+}
+"43
+[; ;mcc_generated_files/SOM_TC.c: 43: void SOM_TMR0_SetInterruptHandler(void (* InterruptHandler))
+[v _SOM_TMR0_SetInterruptHandler `(v ~T0 @X0 1 ef1`*v ]
+"44
+[; ;mcc_generated_files/SOM_TC.c: 44: {
+{
+[e :U _SOM_TMR0_SetInterruptHandler ]
+"43
+[; ;mcc_generated_files/SOM_TC.c: 43: void SOM_TMR0_SetInterruptHandler(void (* InterruptHandler))
+[v _InterruptHandler `*v ~T0 @X0 1 r1 ]
+"44
+[; ;mcc_generated_files/SOM_TC.c: 44: {
+[f ]
+"46
+[; ;mcc_generated_files/SOM_TC.c: 46: }
+[e :UE 8 ]
+}
+"53
+[; ;mcc_generated_files/SOM_TC.c: 53:    void SOM_TMR0_DefaultInterruptHandler()
+[v _SOM_TMR0_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+"54
+[; ;mcc_generated_files/SOM_TC.c: 54: {
+{
+[e :U _SOM_TMR0_DefaultInterruptHandler ]
+[f ]
+"55
+[; ;mcc_generated_files/SOM_TC.c: 55:     TMR0_DefaultInterruptHandler();
+[e ( _TMR0_DefaultInterruptHandler ..  ]
+"56
+[; ;mcc_generated_files/SOM_TC.c: 56: }
+[e :UE 9 ]
+}

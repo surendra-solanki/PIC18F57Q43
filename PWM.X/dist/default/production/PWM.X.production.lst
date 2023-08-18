@@ -1,0 +1,2272 @@
+
+
+Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
+                                                                                               Sat Dec 24 14:09:29 2022
+
+Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
+     1                           	processor	18F57Q43
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	nvCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     8                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text8,global,reloc=2,class=CODE,delta=1
+    17                           	psect	text9,global,reloc=2,class=CODE,delta=1
+    18                           	psect	text10,global,reloc=2,class=CODE,delta=1
+    19                           	psect	text11,global,reloc=2,class=CODE,delta=1
+    20                           	psect	text12,global,reloc=2,class=CODE,delta=1
+    21                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    22                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    23                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=1,noexec
+    24                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    25   000000                     
+    26                           ; Generated 17/06/2022 GMT
+    27                           ; 
+    28                           ; Copyright © 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    29                           ; All rights reserved.
+    30                           ; 
+    31                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    32                           ; 
+    33                           ; Redistribution and use in source and binary forms, with or without modification, are
+    34                           ; permitted provided that the following conditions are met:
+    35                           ; 
+    36                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    37                           ;        conditions and the following disclaimer.
+    38                           ; 
+    39                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    40                           ;        of conditions and the following disclaimer in the documentation and/or other
+    41                           ;        materials provided with the distribution. Publication is not required when
+    42                           ;        this file is used in an embedded application.
+    43                           ; 
+    44                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    45                           ;        software without specific prior written permission.
+    46                           ; 
+    47                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    48                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    49                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    50                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    51                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    52                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    53                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    54                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    55                           ; 
+    56                           ; 
+    57                           ; Code-generator required, PIC18F57Q43 Definitions
+    58                           ; 
+    59                           ; SFR Addresses
+    60   000000                     
+    61 ;; Function _PWM1_16BIT_Slice1Output1_DefaultInterruptHandler is unused but had its address taken
+    62   000000                     
+    63 ;; Function _PWM1_16BIT_Slice1Output2_DefaultInterruptHandler is unused but had its address taken
+    64   000000                     
+    65 ;; Function _PWM1_16BIT_Period_DefaultInterruptHandler is unused but had its address taken
+    66   000000                     _PWM1CON	set	1129
+    67   000000                     _PWM1S1CFG	set	1130
+    68   000000                     _PWM1GIE	set	1128
+    69   000000                     _PWM1GIR	set	1127
+    70   000000                     _PWM1PIPOS	set	1126
+    71   000000                     _PWM1CPRE	set	1125
+    72   000000                     _PWM1PRH	set	1124
+    73   000000                     _PWM1PRL	set	1123
+    74   000000                     _PWM1LDS	set	1122
+    75   000000                     _PWM1CLK	set	1121
+    76   000000                     _TRISD	set	1225
+    77   000000                     _TRISC	set	1224
+    78   000000                     _TRISB	set	1223
+    79   000000                     _LATC	set	1216
+    80   000000                     _LATB	set	1215
+    81   000000                     _OSCTUNE	set	176
+    82   000000                     _OSCFRQ	set	177
+    83   000000                     _OSCEN	set	179
+    84                           
+    85                           	psect	nvCOMRAM
+    86   000501                     __pnvCOMRAM:
+    87                           	callstack 0
+    88   000501                     _PWM1_16BIT_Period_InterruptHandler:
+    89                           	callstack 0
+    90   000501                     	ds	3
+    91   000504                     _PWM1_16BIT_Slice1Output2_InterruptHandler:
+    92                           	callstack 0
+    93   000504                     	ds	3
+    94   000507                     _PWM1_16BIT_Slice1Output1_InterruptHandler:
+    95                           	callstack 0
+    96   000507                     	ds	3
+    97   000000                     _PWM1GIEbits	set	1128
+    98   000000                     _PWM1CONbits	set	1129
+    99   000000                     _PWM1GIRbits	set	1127
+   100   000000                     _PMD0	set	96
+   101   000000                     _ACTCON	set	172
+   102   000000                     _OSCCON1	set	173
+   103   000000                     _OSCCON3	set	175
+   104   000000                     _RC0PPS	set	529
+   105   000000                     _RC4I2C	set	646
+   106   000000                     _RC3I2C	set	647
+   107   000000                     _RB2I2C	set	648
+   108   000000                     _RB1I2C	set	649
+   109   000000                     _ANSELA	set	1024
+   110   000000                     _ANSELB	set	1032
+   111   000000                     _ANSELC	set	1040
+   112   000000                     _ANSELD	set	1048
+   113   000000                     _LATA	set	1214
+   114   000000                     _LATD	set	1217
+   115   000000                     _LATE	set	1218
+   116   000000                     _PMD3	set	99
+   117   000000                     _PMD1	set	97
+   118   000000                     _PMD8	set	104
+   119   000000                     _PMD7	set	103
+   120   000000                     _PMD6	set	102
+   121   000000                     _PMD5	set	101
+   122   000000                     _PMD4	set	100
+   123   000000                     _TRISA	set	1222
+   124   000000                     _TRISE	set	1226
+   125   000000                     _LATF	set	1219
+   126   000000                     _TRISF	set	1227
+   127   000000                     _INLVLD	set	1052
+   128   000000                     _SLRCOND	set	1051
+   129   000000                     _ODCOND	set	1050
+   130   000000                     _WPUD	set	1049
+   131   000000                     _ANSELE	set	1056
+   132   000000                     _INLVLC	set	1044
+   133   000000                     _SLRCONC	set	1043
+   134   000000                     _ODCONC	set	1042
+   135   000000                     _WPUC	set	1041
+   136   000000                     _INLVLB	set	1036
+   137   000000                     _SLRCONB	set	1035
+   138   000000                     _ODCONB	set	1034
+   139   000000                     _WPUB	set	1033
+   140   000000                     _INLVLE	set	1060
+   141   000000                     _SLRCONE	set	1059
+   142   000000                     _ODCONE	set	1058
+   143   000000                     _WPUE	set	1057
+   144   000000                     _ANSELF	set	1064
+   145   000000                     _PWM1ERS	set	1120
+   146   000000                     _INLVLF	set	1068
+   147   000000                     _SLRCONF	set	1067
+   148   000000                     _ODCONF	set	1066
+   149   000000                     _WPUF	set	1065
+   150   000000                     _INLVLA	set	1028
+   151   000000                     _SLRCONA	set	1027
+   152   000000                     _ODCONA	set	1026
+   153   000000                     _WPUA	set	1025
+   154   000000                     _PWMIN0PPS	set	599
+   155   000000                     _PIE4bits	set	1186
+   156   000000                     _PIR4bits	set	1202
+   157   000000                     _PWM1S1P2H	set	1134
+   158   000000                     _PWM1S1P2L	set	1133
+   159   000000                     _PWM1S1P1H	set	1132
+   160   000000                     _PWM1S1P1L	set	1131
+   161                           
+   162                           ; #config settings
+   163                           
+   164                           	psect	cinit
+   165   01FE06                     __pcinit:
+   166                           	callstack 0
+   167   01FE06                     start_initialization:
+   168                           	callstack 0
+   169   01FE06                     __initialization:
+   170                           	callstack 0
+   171   01FE06                     end_of_initialization:
+   172                           	callstack 0
+   173   01FE06                     __end_of__initialization:
+   174                           	callstack 0
+   175   01FE06  0100               	movlb	0
+   176   01FE08  EF4E  F0FF         	goto	_main	;jump to C main() function
+   177                           
+   178                           	psect	cstackCOMRAM
+   179   00050A                     __pcstackCOMRAM:
+   180                           	callstack 0
+   181   00050A                     PWM1_16BIT_WritePeriodRegister@periodCount:
+   182                           	callstack 0
+   183   00050A                     PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue:
+   184                           	callstack 0
+   185   00050A                     PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler:
+   186                           	callstack 0
+   187   00050A                     PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler:
+   188                           	callstack 0
+   189   00050A                     PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler:
+   190                           	callstack 0
+   191                           
+   192                           ; 3 bytes @ 0x0
+   193   00050A                     	ds	2
+   194   00050C                     
+   195                           ; 1 bytes @ 0x2
+   196   00050C                     	ds	1
+   197   00050D                     main@periodCount:
+   198                           	callstack 0
+   199                           
+   200                           ; 2 bytes @ 0x3
+   201   00050D                     	ds	2
+   202   00050F                     main@value:
+   203                           	callstack 0
+   204                           
+   205                           ; 2 bytes @ 0x5
+   206   00050F                     	ds	2
+   207                           
+   208 ;;
+   209 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   210 ;;
+   211 ;; *************** function _main *****************
+   212 ;; Defined at:
+   213 ;;		line 49 in file "main.c"
+   214 ;; Parameters:    Size  Location     Type
+   215 ;;		None
+   216 ;; Auto vars:     Size  Location     Type
+   217 ;;  value           2    5[COMRAM] int 
+   218 ;;  periodCount     2    3[COMRAM] int 
+   219 ;;  value1          2    0        int 
+   220 ;; Return value:  Size  Location     Type
+   221 ;;                  1    wreg      void 
+   222 ;; Registers used:
+   223 ;;		wreg, status,2, status,0, cstack
+   224 ;; Tracked objects:
+   225 ;;		On entry : 0/0
+   226 ;;		On exit  : 0/0
+   227 ;;		Unchanged: 0/0
+   228 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   229 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   230 ;;      Locals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   231 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   232 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   233 ;;Total ram usage:        4 bytes
+   234 ;; Hardware stack levels required when called: 3
+   235 ;; This function calls:
+   236 ;;		_PWM1_16BIT_Enable
+   237 ;;		_PWM1_16BIT_Initialize
+   238 ;;		_PWM1_16BIT_LoadBufferRegisters
+   239 ;;		_PWM1_16BIT_SetSlice1Output1DutyCycleRegister
+   240 ;;		_PWM1_16BIT_WritePeriodRegister
+   241 ;;		_SYSTEM_Initialize
+   242 ;; This function is called by:
+   243 ;;		Startup code after reset
+   244 ;; This function uses a non-reentrant model
+   245 ;;
+   246                           
+   247                           	psect	text0
+   248   01FE9C                     __ptext0:
+   249                           	callstack 0
+   250   01FE9C                     _main:
+   251                           	callstack 124
+   252   01FE9C                     
+   253                           ;main.c: 52:     SYSTEM_Initialize();
+   254   01FE9C  EC25  F0FF         	call	_SYSTEM_Initialize	;wreg free
+   255                           
+   256                           ;main.c: 53:     PWM1_16BIT_Initialize();
+   257   01FEA0  EC6E  F0FF         	call	_PWM1_16BIT_Initialize	;wreg free
+   258   01FEA4                     
+   259                           ;main.c: 54:     int periodCount = 100;
+   260   01FEA4  0E00               	movlw	0
+   261   01FEA6  6E0E               	movwf	(main@periodCount+1)^(0+1280),c
+   262   01FEA8  0E64               	movlw	100
+   263   01FEAA  6E0D               	movwf	main@periodCount^(0+1280),c
+   264   01FEAC                     
+   265                           ;main.c: 55:     int value = 50;
+   266   01FEAC  0E00               	movlw	0
+   267   01FEAE  6E10               	movwf	(main@value+1)^(0+1280),c
+   268   01FEB0  0E32               	movlw	50
+   269   01FEB2  6E0F               	movwf	main@value^(0+1280),c
+   270   01FEB4                     l1132:
+   271                           
+   272                           ;main.c: 70:     {;main.c: 72:         PWM1_16BIT_Enable();
+   273   01FEB4  ECFF  F0FE         	call	_PWM1_16BIT_Enable	;wreg free
+   274   01FEB8                     
+   275                           ;main.c: 73:         PWM1_16BIT_WritePeriodRegister(periodCount);
+   276   01FEB8  C50D  F50A         	movff	main@periodCount,PWM1_16BIT_WritePeriodRegister@periodCount
+   277   01FEBC  C50E  F50B         	movff	main@periodCount+1,PWM1_16BIT_WritePeriodRegister@periodCount+1
+   278   01FEC0  EC0B  F0FF         	call	_PWM1_16BIT_WritePeriodRegister	;wreg free
+   279   01FEC4                     
+   280                           ;main.c: 74:         PWM1_16BIT_SetSlice1Output1DutyCycleRegister(value);
+   281   01FEC4  C50F  F50A         	movff	main@value,PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue
+   282   01FEC8  C510  F50B         	movff	main@value+1,PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue+1
+   283   01FECC  EC06  F0FF         	call	_PWM1_16BIT_SetSlice1Output1DutyCycleRegister	;wreg free
+   284   01FED0                     
+   285                           ;main.c: 75:         PWM1_16BIT_LoadBufferRegisters();
+   286   01FED0  EC01  F0FF         	call	_PWM1_16BIT_LoadBufferRegisters	;wreg free
+   287   01FED4  EF5A  F0FF         	goto	l1132
+   288   01FED8  EFFE  F0FF         	goto	start
+   289   01FEDC                     __end_of_main:
+   290                           	callstack 0
+   291                           
+   292 ;; *************** function _SYSTEM_Initialize *****************
+   293 ;; Defined at:
+   294 ;;		line 50 in file "mcc_generated_files/mcc.c"
+   295 ;; Parameters:    Size  Location     Type
+   296 ;;		None
+   297 ;; Auto vars:     Size  Location     Type
+   298 ;;		None
+   299 ;; Return value:  Size  Location     Type
+   300 ;;                  1    wreg      void 
+   301 ;; Registers used:
+   302 ;;		wreg, status,2, status,0, cstack
+   303 ;; Tracked objects:
+   304 ;;		On entry : 0/0
+   305 ;;		On exit  : 0/0
+   306 ;;		Unchanged: 0/0
+   307 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   308 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   309 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   310 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   311 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   312 ;;Total ram usage:        0 bytes
+   313 ;; Hardware stack levels used: 1
+   314 ;; Hardware stack levels required when called: 2
+   315 ;; This function calls:
+   316 ;;		_OSCILLATOR_Initialize
+   317 ;;		_PIN_MANAGER_Initialize
+   318 ;;		_PMD_Initialize
+   319 ;;		_PWM1_16BIT_Initialize
+   320 ;; This function is called by:
+   321 ;;		_main
+   322 ;; This function uses a non-reentrant model
+   323 ;;
+   324                           
+   325                           	psect	text1
+   326   01FE4A                     __ptext1:
+   327                           	callstack 0
+   328   01FE4A                     _SYSTEM_Initialize:
+   329                           	callstack 124
+   330   01FE4A                     
+   331                           ;mcc_generated_files/mcc.c: 52:     PMD_Initialize();
+   332   01FE4A  EC3C  F0FF         	call	_PMD_Initialize	;wreg free
+   333                           
+   334                           ;mcc_generated_files/mcc.c: 53:     PIN_MANAGER_Initialize();
+   335   01FE4E  ECAB  F0FF         	call	_PIN_MANAGER_Initialize	;wreg free
+   336                           
+   337                           ;mcc_generated_files/mcc.c: 54:     OSCILLATOR_Initialize();
+   338   01FE52  EC2E  F0FF         	call	_OSCILLATOR_Initialize	;wreg free
+   339   01FE56                     
+   340                           ;mcc_generated_files/mcc.c: 55:     PWM1_16BIT_Initialize();
+   341   01FE56  EC6E  F0FF         	call	_PWM1_16BIT_Initialize	;wreg free
+   342   01FE5A  0012               	return		;funcret
+   343   01FE5C                     __end_of_SYSTEM_Initialize:
+   344                           	callstack 0
+   345                           
+   346 ;; *************** function _PWM1_16BIT_Initialize *****************
+   347 ;; Defined at:
+   348 ;;		line 63 in file "mcc_generated_files/pwm1_16bit.c"
+   349 ;; Parameters:    Size  Location     Type
+   350 ;;		None
+   351 ;; Auto vars:     Size  Location     Type
+   352 ;;		None
+   353 ;; Return value:  Size  Location     Type
+   354 ;;                  1    wreg      void 
+   355 ;; Registers used:
+   356 ;;		wreg, status,2, status,0, cstack
+   357 ;; Tracked objects:
+   358 ;;		On entry : 0/0
+   359 ;;		On exit  : 0/0
+   360 ;;		Unchanged: 0/0
+   361 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   362 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   363 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   364 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   365 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   366 ;;Total ram usage:        0 bytes
+   367 ;; Hardware stack levels used: 1
+   368 ;; Hardware stack levels required when called: 1
+   369 ;; This function calls:
+   370 ;;		_PWM1_16BIT_Period_SetInterruptHandler
+   371 ;;		_PWM1_16BIT_Slice1Output1_SetInterruptHandler
+   372 ;;		_PWM1_16BIT_Slice1Output2_SetInterruptHandler
+   373 ;; This function is called by:
+   374 ;;		_SYSTEM_Initialize
+   375 ;;		_main
+   376 ;; This function uses a non-reentrant model
+   377 ;;
+   378                           
+   379                           	psect	text2
+   380   01FEDC                     __ptext2:
+   381                           	callstack 0
+   382   01FEDC                     _PWM1_16BIT_Initialize:
+   383                           	callstack 124
+   384   01FEDC                     
+   385                           ;mcc_generated_files/pwm1_16bit.c: 66:     PWM1ERS = 0x00;
+   386   01FEDC  0E00               	movlw	0
+   387   01FEDE  6E60               	movwf	96,c	;volatile
+   388                           
+   389                           ;mcc_generated_files/pwm1_16bit.c: 69:     PWM1CLK = 0x03;
+   390   01FEE0  0E03               	movlw	3
+   391   01FEE2  6E61               	movwf	97,c	;volatile
+   392                           
+   393                           ;mcc_generated_files/pwm1_16bit.c: 72:     PWM1LDS = 0x00;
+   394   01FEE4  0E00               	movlw	0
+   395   01FEE6  6E62               	movwf	98,c	;volatile
+   396                           
+   397                           ;mcc_generated_files/pwm1_16bit.c: 75:     PWM1PRL = 0x1F;
+   398   01FEE8  0E1F               	movlw	31
+   399   01FEEA  6E63               	movwf	99,c	;volatile
+   400                           
+   401                           ;mcc_generated_files/pwm1_16bit.c: 78:     PWM1PRH = 0x03;
+   402   01FEEC  0E03               	movlw	3
+   403   01FEEE  6E64               	movwf	100,c	;volatile
+   404                           
+   405                           ;mcc_generated_files/pwm1_16bit.c: 81:     PWM1CPRE = 0x04;
+   406   01FEF0  0E04               	movlw	4
+   407   01FEF2  6E65               	movwf	101,c	;volatile
+   408                           
+   409                           ;mcc_generated_files/pwm1_16bit.c: 84:     PWM1PIPOS = 0x00;
+   410   01FEF4  0E00               	movlw	0
+   411   01FEF6  6E66               	movwf	102,c	;volatile
+   412                           
+   413                           ;mcc_generated_files/pwm1_16bit.c: 87:     PWM1GIR = 0x00;
+   414   01FEF8  0E00               	movlw	0
+   415   01FEFA  6E67               	movwf	103,c	;volatile
+   416                           
+   417                           ;mcc_generated_files/pwm1_16bit.c: 90:     PWM1GIE = 0x00;
+   418   01FEFC  0E00               	movlw	0
+   419   01FEFE  6E68               	movwf	104,c	;volatile
+   420                           
+   421                           ;mcc_generated_files/pwm1_16bit.c: 93:     PWM1S1CFG = 0x00;
+   422   01FF00  0E00               	movlw	0
+   423   01FF02  6E6A               	movwf	106,c	;volatile
+   424                           
+   425                           ;mcc_generated_files/pwm1_16bit.c: 96:     PWM1S1P1L = 0x90;
+   426   01FF04  0E90               	movlw	144
+   427   01FF06  6E6B               	movwf	107,c	;volatile
+   428                           
+   429                           ;mcc_generated_files/pwm1_16bit.c: 99:     PWM1S1P1H = 0x01;
+   430   01FF08  0E01               	movlw	1
+   431   01FF0A  6E6C               	movwf	108,c	;volatile
+   432                           
+   433                           ;mcc_generated_files/pwm1_16bit.c: 102:     PWM1S1P2L = 0x90;
+   434   01FF0C  0E90               	movlw	144
+   435   01FF0E  6E6D               	movwf	109,c	;volatile
+   436                           
+   437                           ;mcc_generated_files/pwm1_16bit.c: 105:     PWM1S1P2H = 0x01;
+   438   01FF10  0E01               	movlw	1
+   439   01FF12  6E6E               	movwf	110,c	;volatile
+   440   01FF14                     
+   441                           ;mcc_generated_files/pwm1_16bit.c: 108:     PIR4bits.PWM1PIF = 0;
+   442   01FF14  9CB2               	bcf	178,6,c	;volatile
+   443   01FF16                     
+   444                           ;mcc_generated_files/pwm1_16bit.c: 111:     PIR4bits.PWM1IF = 0;
+   445   01FF16  9EB2               	bcf	178,7,c	;volatile
+   446   01FF18                     
+   447                           ;mcc_generated_files/pwm1_16bit.c: 114:     PWM1GIRbits.S1P1IF = 0;
+   448   01FF18  9067               	bcf	103,0,c	;volatile
+   449   01FF1A                     
+   450                           ;mcc_generated_files/pwm1_16bit.c: 117:     PWM1GIRbits.S1P2IF = 0;
+   451   01FF1A  9267               	bcf	103,1,c	;volatile
+   452   01FF1C                     
+   453                           ;mcc_generated_files/pwm1_16bit.c: 120:     PIE4bits.PWM1IE = 0;
+   454   01FF1C  9EA2               	bcf	162,7,c	;volatile
+   455   01FF1E                     
+   456                           ;mcc_generated_files/pwm1_16bit.c: 123:     PIE4bits.PWM1PIE = 0;
+   457   01FF1E  9CA2               	bcf	162,6,c	;volatile
+   458   01FF20                     
+   459                           ;mcc_generated_files/pwm1_16bit.c: 126:     PWM1_16BIT_Slice1Output1_SetInterruptHandler
+      +                          (PWM1_16BIT_Slice1Output1_DefaultInterruptHandler);
+   460   01FF20  0E00               	movlw	0
+   461   01FF22  6E0A               	movwf	PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler^(0+1280),c
+   462   01FF24  0E00               	movlw	0
+   463   01FF26  6E0B               	movwf	(PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler+1)^(0+1280),c
+   464   01FF28  0E00               	movlw	0
+   465   01FF2A  6E0C               	movwf	(PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler+2)^(0+1280),c
+   466   01FF2C  EC17  F0FF         	call	_PWM1_16BIT_Slice1Output1_SetInterruptHandler	;wreg free
+   467   01FF30                     
+   468                           ;mcc_generated_files/pwm1_16bit.c: 127:     PWM1_16BIT_Slice1Output2_SetInterruptHandler
+      +                          (PWM1_16BIT_Slice1Output2_DefaultInterruptHandler);
+   469   01FF30  0E00               	movlw	0
+   470   01FF32  6E0A               	movwf	PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler^(0+1280),c
+   471   01FF34  0E00               	movlw	0
+   472   01FF36  6E0B               	movwf	(PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler+1)^(0+1280),c
+   473   01FF38  0E00               	movlw	0
+   474   01FF3A  6E0C               	movwf	(PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler+2)^(0+1280),c
+   475   01FF3C  EC1E  F0FF         	call	_PWM1_16BIT_Slice1Output2_SetInterruptHandler	;wreg free
+   476   01FF40                     
+   477                           ;mcc_generated_files/pwm1_16bit.c: 128:     PWM1_16BIT_Period_SetInterruptHandler(PWM1_1
+      +                          6BIT_Period_DefaultInterruptHandler);
+   478   01FF40  0E00               	movlw	0
+   479   01FF42  6E0A               	movwf	PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler^(0+1280),c
+   480   01FF44  0E00               	movlw	0
+   481   01FF46  6E0B               	movwf	(PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler+1)^(0+1280),c
+   482   01FF48  0E00               	movlw	0
+   483   01FF4A  6E0C               	movwf	(PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler+2)^(0+1280),c
+   484   01FF4C  EC10  F0FF         	call	_PWM1_16BIT_Period_SetInterruptHandler	;wreg free
+   485   01FF50                     
+   486                           ;mcc_generated_files/pwm1_16bit.c: 131:     PWM1CON = 0x80;
+   487   01FF50  0E80               	movlw	128
+   488   01FF52  6E69               	movwf	105,c	;volatile
+   489   01FF54  0012               	return		;funcret
+   490   01FF56                     __end_of_PWM1_16BIT_Initialize:
+   491                           	callstack 0
+   492                           
+   493 ;; *************** function _PWM1_16BIT_Slice1Output2_SetInterruptHandler *****************
+   494 ;; Defined at:
+   495 ;;		line 197 in file "mcc_generated_files/pwm1_16bit.c"
+   496 ;; Parameters:    Size  Location     Type
+   497 ;;  InterruptHan    3    0[COMRAM] PTR FTN()void 
+   498 ;;		 -> PWM1_16BIT_Slice1Output2_DefaultInterruptHandler(1), 
+   499 ;; Auto vars:     Size  Location     Type
+   500 ;;		None
+   501 ;; Return value:  Size  Location     Type
+   502 ;;                  1    wreg      void 
+   503 ;; Registers used:
+   504 ;;		wreg, status,2, status,0
+   505 ;; Tracked objects:
+   506 ;;		On entry : 0/0
+   507 ;;		On exit  : 0/0
+   508 ;;		Unchanged: 0/0
+   509 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   510 ;;      Params:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   511 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   512 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   513 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   514 ;;Total ram usage:        3 bytes
+   515 ;; Hardware stack levels used: 1
+   516 ;; This function calls:
+   517 ;;		Nothing
+   518 ;; This function is called by:
+   519 ;;		_PWM1_16BIT_Initialize
+   520 ;; This function uses a non-reentrant model
+   521 ;;
+   522                           
+   523                           	psect	text3
+   524   01FE3C                     __ptext3:
+   525                           	callstack 0
+   526   01FE3C                     _PWM1_16BIT_Slice1Output2_SetInterruptHandler:
+   527                           	callstack 124
+   528   01FE3C                     
+   529                           ;mcc_generated_files/pwm1_16bit.c: 197: void PWM1_16BIT_Slice1Output2_SetInterruptHandle
+      +                          r(void (* InterruptHandler)(void));mcc_generated_files/pwm1_16bit.c: 198: {;mcc_generate
+      +                          d_files/pwm1_16bit.c: 199:     PWM1_16BIT_Slice1Output2_InterruptHandler = InterruptHand
+      +                          ler;
+   530   01FE3C  C50A  F504         	movff	PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler,_PWM1_16BIT_Slice1O
+      +                          utput2_InterruptHandler
+   531   01FE40  C50B  F505         	movff	PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler+1,_PWM1_16BIT_Slice
+      +                          1Output2_InterruptHandler+1
+   532   01FE44  C50C  F506         	movff	PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler+2,_PWM1_16BIT_Slice
+      +                          1Output2_InterruptHandler+2
+   533   01FE48  0012               	return		;funcret
+   534   01FE4A                     __end_of_PWM1_16BIT_Slice1Output2_SetInterruptHandler:
+   535                           	callstack 0
+   536                           
+   537 ;; *************** function _PWM1_16BIT_Slice1Output1_SetInterruptHandler *****************
+   538 ;; Defined at:
+   539 ;;		line 192 in file "mcc_generated_files/pwm1_16bit.c"
+   540 ;; Parameters:    Size  Location     Type
+   541 ;;  InterruptHan    3    0[COMRAM] PTR FTN()void 
+   542 ;;		 -> PWM1_16BIT_Slice1Output1_DefaultInterruptHandler(1), 
+   543 ;; Auto vars:     Size  Location     Type
+   544 ;;		None
+   545 ;; Return value:  Size  Location     Type
+   546 ;;                  1    wreg      void 
+   547 ;; Registers used:
+   548 ;;		wreg, status,2, status,0
+   549 ;; Tracked objects:
+   550 ;;		On entry : 0/0
+   551 ;;		On exit  : 0/0
+   552 ;;		Unchanged: 0/0
+   553 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   554 ;;      Params:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   555 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   556 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   557 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   558 ;;Total ram usage:        3 bytes
+   559 ;; Hardware stack levels used: 1
+   560 ;; This function calls:
+   561 ;;		Nothing
+   562 ;; This function is called by:
+   563 ;;		_PWM1_16BIT_Initialize
+   564 ;; This function uses a non-reentrant model
+   565 ;;
+   566                           
+   567                           	psect	text4
+   568   01FE2E                     __ptext4:
+   569                           	callstack 0
+   570   01FE2E                     _PWM1_16BIT_Slice1Output1_SetInterruptHandler:
+   571                           	callstack 124
+   572   01FE2E                     
+   573                           ;mcc_generated_files/pwm1_16bit.c: 192: void PWM1_16BIT_Slice1Output1_SetInterruptHandle
+      +                          r(void (* InterruptHandler)(void));mcc_generated_files/pwm1_16bit.c: 193: {;mcc_generate
+      +                          d_files/pwm1_16bit.c: 194:     PWM1_16BIT_Slice1Output1_InterruptHandler = InterruptHand
+      +                          ler;
+   574   01FE2E  C50A  F507         	movff	PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler,_PWM1_16BIT_Slice1O
+      +                          utput1_InterruptHandler
+   575   01FE32  C50B  F508         	movff	PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler+1,_PWM1_16BIT_Slice
+      +                          1Output1_InterruptHandler+1
+   576   01FE36  C50C  F509         	movff	PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler+2,_PWM1_16BIT_Slice
+      +                          1Output1_InterruptHandler+2
+   577   01FE3A  0012               	return		;funcret
+   578   01FE3C                     __end_of_PWM1_16BIT_Slice1Output1_SetInterruptHandler:
+   579                           	callstack 0
+   580                           
+   581 ;; *************** function _PWM1_16BIT_Period_SetInterruptHandler *****************
+   582 ;; Defined at:
+   583 ;;		line 202 in file "mcc_generated_files/pwm1_16bit.c"
+   584 ;; Parameters:    Size  Location     Type
+   585 ;;  InterruptHan    3    0[COMRAM] PTR FTN()void 
+   586 ;;		 -> PWM1_16BIT_Period_DefaultInterruptHandler(1), 
+   587 ;; Auto vars:     Size  Location     Type
+   588 ;;		None
+   589 ;; Return value:  Size  Location     Type
+   590 ;;                  1    wreg      void 
+   591 ;; Registers used:
+   592 ;;		wreg, status,2, status,0
+   593 ;; Tracked objects:
+   594 ;;		On entry : 0/0
+   595 ;;		On exit  : 0/0
+   596 ;;		Unchanged: 0/0
+   597 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   598 ;;      Params:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   599 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   600 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   601 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   602 ;;Total ram usage:        3 bytes
+   603 ;; Hardware stack levels used: 1
+   604 ;; This function calls:
+   605 ;;		Nothing
+   606 ;; This function is called by:
+   607 ;;		_PWM1_16BIT_Initialize
+   608 ;; This function uses a non-reentrant model
+   609 ;;
+   610                           
+   611                           	psect	text5
+   612   01FE20                     __ptext5:
+   613                           	callstack 0
+   614   01FE20                     _PWM1_16BIT_Period_SetInterruptHandler:
+   615                           	callstack 124
+   616   01FE20                     
+   617                           ;mcc_generated_files/pwm1_16bit.c: 202: void PWM1_16BIT_Period_SetInterruptHandler(void 
+      +                          (* InterruptHandler)(void));mcc_generated_files/pwm1_16bit.c: 203: {;mcc_generated_files
+      +                          /pwm1_16bit.c: 204:     PWM1_16BIT_Period_InterruptHandler = InterruptHandler;
+   618   01FE20  C50A  F501         	movff	PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler,_PWM1_16BIT_Period_Interru
+      +                          ptHandler
+   619   01FE24  C50B  F502         	movff	PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler+1,_PWM1_16BIT_Period_Inter
+      +                          ruptHandler+1
+   620   01FE28  C50C  F503         	movff	PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler+2,_PWM1_16BIT_Period_Inter
+      +                          ruptHandler+2
+   621   01FE2C  0012               	return		;funcret
+   622   01FE2E                     __end_of_PWM1_16BIT_Period_SetInterruptHandler:
+   623                           	callstack 0
+   624                           
+   625 ;; *************** function _PMD_Initialize *****************
+   626 ;; Defined at:
+   627 ;;		line 74 in file "mcc_generated_files/mcc.c"
+   628 ;; Parameters:    Size  Location     Type
+   629 ;;		None
+   630 ;; Auto vars:     Size  Location     Type
+   631 ;;		None
+   632 ;; Return value:  Size  Location     Type
+   633 ;;                  1    wreg      void 
+   634 ;; Registers used:
+   635 ;;		wreg, status,2
+   636 ;; Tracked objects:
+   637 ;;		On entry : 0/0
+   638 ;;		On exit  : 0/0
+   639 ;;		Unchanged: 0/0
+   640 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   641 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   642 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   643 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   644 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   645 ;;Total ram usage:        0 bytes
+   646 ;; Hardware stack levels used: 1
+   647 ;; This function calls:
+   648 ;;		Nothing
+   649 ;; This function is called by:
+   650 ;;		_SYSTEM_Initialize
+   651 ;; This function uses a non-reentrant model
+   652 ;;
+   653                           
+   654                           	psect	text6
+   655   01FE78                     __ptext6:
+   656                           	callstack 0
+   657   01FE78                     _PMD_Initialize:
+   658                           	callstack 125
+   659   01FE78                     
+   660                           ;mcc_generated_files/mcc.c: 77:     PMD0 = 0x00;
+   661   01FE78  0E00               	movlw	0
+   662   01FE7A  0100               	movlb	0	; () banked
+   663   01FE7C  6F60               	movwf	96,b	;volatile
+   664                           
+   665                           ;mcc_generated_files/mcc.c: 79:     PMD1 = 0x00;
+   666   01FE7E  0E00               	movlw	0
+   667   01FE80  6F61               	movwf	97,b	;volatile
+   668                           
+   669                           ;mcc_generated_files/mcc.c: 81:     PMD3 = 0x00;
+   670   01FE82  0E00               	movlw	0
+   671   01FE84  6F63               	movwf	99,b	;volatile
+   672                           
+   673                           ;mcc_generated_files/mcc.c: 83:     PMD4 = 0x00;
+   674   01FE86  0E00               	movlw	0
+   675   01FE88  6F64               	movwf	100,b	;volatile
+   676                           
+   677                           ;mcc_generated_files/mcc.c: 85:     PMD5 = 0x00;
+   678   01FE8A  0E00               	movlw	0
+   679   01FE8C  6F65               	movwf	101,b	;volatile
+   680                           
+   681                           ;mcc_generated_files/mcc.c: 87:     PMD6 = 0x00;
+   682   01FE8E  0E00               	movlw	0
+   683   01FE90  6F66               	movwf	102,b	;volatile
+   684                           
+   685                           ;mcc_generated_files/mcc.c: 89:     PMD7 = 0x00;
+   686   01FE92  0E00               	movlw	0
+   687   01FE94  6F67               	movwf	103,b	;volatile
+   688                           
+   689                           ;mcc_generated_files/mcc.c: 91:     PMD8 = 0x00;
+   690   01FE96  0E00               	movlw	0
+   691   01FE98  6F68               	movwf	104,b	;volatile
+   692   01FE9A                     
+   693                           ; BSR set to: 0
+   694   01FE9A  0012               	return		;funcret
+   695   01FE9C                     __end_of_PMD_Initialize:
+   696                           	callstack 0
+   697                           
+   698 ;; *************** function _PIN_MANAGER_Initialize *****************
+   699 ;; Defined at:
+   700 ;;		line 55 in file "mcc_generated_files/pin_manager.c"
+   701 ;; Parameters:    Size  Location     Type
+   702 ;;		None
+   703 ;; Auto vars:     Size  Location     Type
+   704 ;;		None
+   705 ;; Return value:  Size  Location     Type
+   706 ;;                  1    wreg      void 
+   707 ;; Registers used:
+   708 ;;		wreg, status,2
+   709 ;; Tracked objects:
+   710 ;;		On entry : 0/0
+   711 ;;		On exit  : 0/0
+   712 ;;		Unchanged: 0/0
+   713 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   714 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   715 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   716 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   717 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   718 ;;Total ram usage:        0 bytes
+   719 ;; Hardware stack levels used: 1
+   720 ;; This function calls:
+   721 ;;		Nothing
+   722 ;; This function is called by:
+   723 ;;		_SYSTEM_Initialize
+   724 ;; This function uses a non-reentrant model
+   725 ;;
+   726                           
+   727                           	psect	text7
+   728   01FF56                     __ptext7:
+   729                           	callstack 0
+   730   01FF56                     _PIN_MANAGER_Initialize:
+   731                           	callstack 125
+   732   01FF56                     
+   733                           ;mcc_generated_files/pin_manager.c: 60:     LATE = 0x00;
+   734   01FF56  0E00               	movlw	0
+   735   01FF58  6EC2               	movwf	194,c	;volatile
+   736                           
+   737                           ;mcc_generated_files/pin_manager.c: 61:     LATD = 0x00;
+   738   01FF5A  0E00               	movlw	0
+   739   01FF5C  6EC1               	movwf	193,c	;volatile
+   740                           
+   741                           ;mcc_generated_files/pin_manager.c: 62:     LATA = 0x00;
+   742   01FF5E  0E00               	movlw	0
+   743   01FF60  6EBE               	movwf	190,c	;volatile
+   744                           
+   745                           ;mcc_generated_files/pin_manager.c: 63:     LATF = 0x00;
+   746   01FF62  0E00               	movlw	0
+   747   01FF64  6EC3               	movwf	195,c	;volatile
+   748                           
+   749                           ;mcc_generated_files/pin_manager.c: 64:     LATB = 0x00;
+   750   01FF66  0E00               	movlw	0
+   751   01FF68  6EBF               	movwf	191,c	;volatile
+   752                           
+   753                           ;mcc_generated_files/pin_manager.c: 65:     LATC = 0x00;
+   754   01FF6A  0E00               	movlw	0
+   755   01FF6C  6EC0               	movwf	192,c	;volatile
+   756                           
+   757                           ;mcc_generated_files/pin_manager.c: 70:     TRISE = 0x07;
+   758   01FF6E  0E07               	movlw	7
+   759   01FF70  6ECA               	movwf	202,c	;volatile
+   760   01FF72                     
+   761                           ;mcc_generated_files/pin_manager.c: 71:     TRISF = 0xFF;
+   762   01FF72  68CB               	setf	203,c	;volatile
+   763   01FF74                     
+   764                           ;mcc_generated_files/pin_manager.c: 72:     TRISA = 0xFF;
+   765   01FF74  68C6               	setf	198,c	;volatile
+   766   01FF76                     
+   767                           ;mcc_generated_files/pin_manager.c: 73:     TRISB = 0xFF;
+   768   01FF76  68C7               	setf	199,c	;volatile
+   769                           
+   770                           ;mcc_generated_files/pin_manager.c: 74:     TRISC = 0xFE;
+   771   01FF78  0EFE               	movlw	254
+   772   01FF7A  6EC8               	movwf	200,c	;volatile
+   773   01FF7C                     
+   774                           ;mcc_generated_files/pin_manager.c: 75:     TRISD = 0xFF;
+   775   01FF7C  68C9               	setf	201,c	;volatile
+   776   01FF7E                     
+   777                           ;mcc_generated_files/pin_manager.c: 80:     ANSELD = 0xFF;
+   778   01FF7E  0104               	movlb	4	; () banked
+   779   01FF80  6918               	setf	24,b	;volatile
+   780                           
+   781                           ;mcc_generated_files/pin_manager.c: 81:     ANSELC = 0xFB;
+   782   01FF82  0EFB               	movlw	251
+   783   01FF84  6F10               	movwf	16,b	;volatile
+   784   01FF86                     
+   785                           ; BSR set to: 4
+   786                           ;mcc_generated_files/pin_manager.c: 82:     ANSELB = 0xFF;
+   787   01FF86  6908               	setf	8,b	;volatile
+   788                           
+   789                           ;mcc_generated_files/pin_manager.c: 83:     ANSELE = 0x07;
+   790   01FF88  0E07               	movlw	7
+   791   01FF8A  6F20               	movwf	32,b	;volatile
+   792   01FF8C                     
+   793                           ; BSR set to: 4
+   794                           ;mcc_generated_files/pin_manager.c: 84:     ANSELF = 0xFF;
+   795   01FF8C  6928               	setf	40,b	;volatile
+   796   01FF8E                     
+   797                           ; BSR set to: 4
+   798                           ;mcc_generated_files/pin_manager.c: 85:     ANSELA = 0xFF;
+   799   01FF8E  6900               	setf	0,b	;volatile
+   800                           
+   801                           ;mcc_generated_files/pin_manager.c: 90:     WPUD = 0x00;
+   802   01FF90  0E00               	movlw	0
+   803   01FF92  6F19               	movwf	25,b	;volatile
+   804                           
+   805                           ;mcc_generated_files/pin_manager.c: 91:     WPUF = 0x00;
+   806   01FF94  0E00               	movlw	0
+   807   01FF96  6F29               	movwf	41,b	;volatile
+   808                           
+   809                           ;mcc_generated_files/pin_manager.c: 92:     WPUE = 0x00;
+   810   01FF98  0E00               	movlw	0
+   811   01FF9A  6F21               	movwf	33,b	;volatile
+   812                           
+   813                           ;mcc_generated_files/pin_manager.c: 93:     WPUB = 0x00;
+   814   01FF9C  0E00               	movlw	0
+   815   01FF9E  6F09               	movwf	9,b	;volatile
+   816                           
+   817                           ;mcc_generated_files/pin_manager.c: 94:     WPUA = 0x00;
+   818   01FFA0  0E00               	movlw	0
+   819   01FFA2  6F01               	movwf	1,b	;volatile
+   820                           
+   821                           ;mcc_generated_files/pin_manager.c: 95:     WPUC = 0x00;
+   822   01FFA4  0E00               	movlw	0
+   823   01FFA6  6F11               	movwf	17,b	;volatile
+   824                           
+   825                           ;mcc_generated_files/pin_manager.c: 100:     RB1I2C = 0x00;
+   826   01FFA8  0E00               	movlw	0
+   827   01FFAA  0102               	movlb	2	; () banked
+   828   01FFAC  6F89               	movwf	137,b	;volatile
+   829                           
+   830                           ;mcc_generated_files/pin_manager.c: 101:     RB2I2C = 0x00;
+   831   01FFAE  0E00               	movlw	0
+   832   01FFB0  6F88               	movwf	136,b	;volatile
+   833                           
+   834                           ;mcc_generated_files/pin_manager.c: 102:     RC3I2C = 0x00;
+   835   01FFB2  0E00               	movlw	0
+   836   01FFB4  6F87               	movwf	135,b	;volatile
+   837                           
+   838                           ;mcc_generated_files/pin_manager.c: 103:     RC4I2C = 0x00;
+   839   01FFB6  0E00               	movlw	0
+   840   01FFB8  6F86               	movwf	134,b	;volatile
+   841                           
+   842                           ;mcc_generated_files/pin_manager.c: 108:     ODCONE = 0x00;
+   843   01FFBA  0E00               	movlw	0
+   844   01FFBC  0104               	movlb	4	; () banked
+   845   01FFBE  6F22               	movwf	34,b	;volatile
+   846                           
+   847                           ;mcc_generated_files/pin_manager.c: 109:     ODCONF = 0x00;
+   848   01FFC0  0E00               	movlw	0
+   849   01FFC2  6F2A               	movwf	42,b	;volatile
+   850                           
+   851                           ;mcc_generated_files/pin_manager.c: 110:     ODCONA = 0x00;
+   852   01FFC4  0E00               	movlw	0
+   853   01FFC6  6F02               	movwf	2,b	;volatile
+   854                           
+   855                           ;mcc_generated_files/pin_manager.c: 111:     ODCONB = 0x00;
+   856   01FFC8  0E00               	movlw	0
+   857   01FFCA  6F0A               	movwf	10,b	;volatile
+   858                           
+   859                           ;mcc_generated_files/pin_manager.c: 112:     ODCONC = 0x00;
+   860   01FFCC  0E00               	movlw	0
+   861   01FFCE  6F12               	movwf	18,b	;volatile
+   862                           
+   863                           ;mcc_generated_files/pin_manager.c: 113:     ODCOND = 0x00;
+   864   01FFD0  0E00               	movlw	0
+   865   01FFD2  6F1A               	movwf	26,b	;volatile
+   866   01FFD4                     
+   867                           ; BSR set to: 4
+   868                           ;mcc_generated_files/pin_manager.c: 118:     SLRCONA = 0xFF;
+   869   01FFD4  6903               	setf	3,b	;volatile
+   870   01FFD6                     
+   871                           ; BSR set to: 4
+   872                           ;mcc_generated_files/pin_manager.c: 119:     SLRCONB = 0xFF;
+   873   01FFD6  690B               	setf	11,b	;volatile
+   874   01FFD8                     
+   875                           ; BSR set to: 4
+   876                           ;mcc_generated_files/pin_manager.c: 120:     SLRCONC = 0xFF;
+   877   01FFD8  6913               	setf	19,b	;volatile
+   878   01FFDA                     
+   879                           ; BSR set to: 4
+   880                           ;mcc_generated_files/pin_manager.c: 121:     SLRCOND = 0xFF;
+   881   01FFDA  691B               	setf	27,b	;volatile
+   882                           
+   883                           ;mcc_generated_files/pin_manager.c: 122:     SLRCONE = 0x07;
+   884   01FFDC  0E07               	movlw	7
+   885   01FFDE  6F23               	movwf	35,b	;volatile
+   886   01FFE0                     
+   887                           ; BSR set to: 4
+   888                           ;mcc_generated_files/pin_manager.c: 123:     SLRCONF = 0xFF;
+   889   01FFE0  692B               	setf	43,b	;volatile
+   890   01FFE2                     
+   891                           ; BSR set to: 4
+   892                           ;mcc_generated_files/pin_manager.c: 128:     INLVLA = 0xFF;
+   893   01FFE2  6904               	setf	4,b	;volatile
+   894   01FFE4                     
+   895                           ; BSR set to: 4
+   896                           ;mcc_generated_files/pin_manager.c: 129:     INLVLB = 0xFF;
+   897   01FFE4  690C               	setf	12,b	;volatile
+   898   01FFE6                     
+   899                           ; BSR set to: 4
+   900                           ;mcc_generated_files/pin_manager.c: 130:     INLVLC = 0xFF;
+   901   01FFE6  6914               	setf	20,b	;volatile
+   902   01FFE8                     
+   903                           ; BSR set to: 4
+   904                           ;mcc_generated_files/pin_manager.c: 131:     INLVLD = 0xFF;
+   905   01FFE8  691C               	setf	28,b	;volatile
+   906                           
+   907                           ;mcc_generated_files/pin_manager.c: 132:     INLVLE = 0x0F;
+   908   01FFEA  0E0F               	movlw	15
+   909   01FFEC  6F24               	movwf	36,b	;volatile
+   910   01FFEE                     
+   911                           ; BSR set to: 4
+   912                           ;mcc_generated_files/pin_manager.c: 133:     INLVLF = 0xFF;
+   913   01FFEE  692C               	setf	44,b	;volatile
+   914                           
+   915                           ;mcc_generated_files/pin_manager.c: 142:     RC0PPS = 0x18;
+   916   01FFF0  0E18               	movlw	24
+   917   01FFF2  0102               	movlb	2	; () banked
+   918   01FFF4  6F11               	movwf	17,b	;volatile
+   919                           
+   920                           ;mcc_generated_files/pin_manager.c: 143:     PWMIN0PPS = 0x12;
+   921   01FFF6  0E12               	movlw	18
+   922   01FFF8  6F57               	movwf	87,b	;volatile
+   923   01FFFA                     
+   924                           ; BSR set to: 2
+   925   01FFFA  0012               	return		;funcret
+   926   01FFFC                     __end_of_PIN_MANAGER_Initialize:
+   927                           	callstack 0
+   928                           
+   929 ;; *************** function _OSCILLATOR_Initialize *****************
+   930 ;; Defined at:
+   931 ;;		line 58 in file "mcc_generated_files/mcc.c"
+   932 ;; Parameters:    Size  Location     Type
+   933 ;;		None
+   934 ;; Auto vars:     Size  Location     Type
+   935 ;;		None
+   936 ;; Return value:  Size  Location     Type
+   937 ;;                  1    wreg      void 
+   938 ;; Registers used:
+   939 ;;		wreg, status,2
+   940 ;; Tracked objects:
+   941 ;;		On entry : 0/0
+   942 ;;		On exit  : 0/0
+   943 ;;		Unchanged: 0/0
+   944 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   945 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   946 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   947 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   948 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   949 ;;Total ram usage:        0 bytes
+   950 ;; Hardware stack levels used: 1
+   951 ;; This function calls:
+   952 ;;		Nothing
+   953 ;; This function is called by:
+   954 ;;		_SYSTEM_Initialize
+   955 ;; This function uses a non-reentrant model
+   956 ;;
+   957                           
+   958                           	psect	text8
+   959   01FE5C                     __ptext8:
+   960                           	callstack 0
+   961   01FE5C                     _OSCILLATOR_Initialize:
+   962                           	callstack 125
+   963   01FE5C                     
+   964                           ;mcc_generated_files/mcc.c: 61:     OSCCON1 = 0x62;
+   965   01FE5C  0E62               	movlw	98
+   966   01FE5E  0100               	movlb	0	; () banked
+   967   01FE60  6FAD               	movwf	173,b	;volatile
+   968                           
+   969                           ;mcc_generated_files/mcc.c: 63:     OSCCON3 = 0x00;
+   970   01FE62  0E00               	movlw	0
+   971   01FE64  6FAF               	movwf	175,b	;volatile
+   972                           
+   973                           ;mcc_generated_files/mcc.c: 65:     OSCEN = 0x00;
+   974   01FE66  0E00               	movlw	0
+   975   01FE68  6FB3               	movwf	179,b	;volatile
+   976                           
+   977                           ;mcc_generated_files/mcc.c: 67:     OSCFRQ = 0x02;
+   978   01FE6A  0E02               	movlw	2
+   979   01FE6C  6FB1               	movwf	177,b	;volatile
+   980                           
+   981                           ;mcc_generated_files/mcc.c: 69:     OSCTUNE = 0x00;
+   982   01FE6E  0E00               	movlw	0
+   983   01FE70  6FB0               	movwf	176,b	;volatile
+   984                           
+   985                           ;mcc_generated_files/mcc.c: 71:     ACTCON = 0x00;
+   986   01FE72  0E00               	movlw	0
+   987   01FE74  6FAC               	movwf	172,b	;volatile
+   988   01FE76                     
+   989                           ; BSR set to: 0
+   990   01FE76  0012               	return		;funcret
+   991   01FE78                     __end_of_OSCILLATOR_Initialize:
+   992                           	callstack 0
+   993                           
+   994 ;; *************** function _PWM1_16BIT_WritePeriodRegister *****************
+   995 ;; Defined at:
+   996 ;;		line 144 in file "mcc_generated_files/pwm1_16bit.c"
+   997 ;; Parameters:    Size  Location     Type
+   998 ;;  periodCount     2    0[COMRAM] unsigned short 
+   999 ;; Auto vars:     Size  Location     Type
+  1000 ;;		None
+  1001 ;; Return value:  Size  Location     Type
+  1002 ;;                  1    wreg      void 
+  1003 ;; Registers used:
+  1004 ;;		wreg, status,2
+  1005 ;; Tracked objects:
+  1006 ;;		On entry : 0/0
+  1007 ;;		On exit  : 0/0
+  1008 ;;		Unchanged: 0/0
+  1009 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1010 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1011 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1012 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1013 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1014 ;;Total ram usage:        2 bytes
+  1015 ;; Hardware stack levels used: 1
+  1016 ;; This function calls:
+  1017 ;;		Nothing
+  1018 ;; This function is called by:
+  1019 ;;		_main
+  1020 ;; This function uses a non-reentrant model
+  1021 ;;
+  1022                           
+  1023                           	psect	text9
+  1024   01FE16                     __ptext9:
+  1025                           	callstack 0
+  1026   01FE16                     _PWM1_16BIT_WritePeriodRegister:
+  1027                           	callstack 126
+  1028   01FE16                     
+  1029                           ;mcc_generated_files/pwm1_16bit.c: 144: void PWM1_16BIT_WritePeriodRegister(uint16_t per
+      +                          iodCount);mcc_generated_files/pwm1_16bit.c: 145: {;mcc_generated_files/pwm1_16bit.c: 146
+      +                          :     PWM1PRL = (uint8_t)periodCount;
+  1030   01FE16  C50A  F463         	movff	PWM1_16BIT_WritePeriodRegister@periodCount,1123	;volatile
+  1031   01FE1A                     
+  1032                           ;mcc_generated_files/pwm1_16bit.c: 147:     PWM1PRH = (uint8_t)(periodCount >> 8);
+  1033   01FE1A  500B               	movf	(PWM1_16BIT_WritePeriodRegister@periodCount+1)^(0+1280),w,c
+  1034   01FE1C  6E64               	movwf	100,c	;volatile
+  1035   01FE1E  0012               	return		;funcret
+  1036   01FE20                     __end_of_PWM1_16BIT_WritePeriodRegister:
+  1037                           	callstack 0
+  1038                           
+  1039 ;; *************** function _PWM1_16BIT_SetSlice1Output1DutyCycleRegister *****************
+  1040 ;; Defined at:
+  1041 ;;		line 150 in file "mcc_generated_files/pwm1_16bit.c"
+  1042 ;; Parameters:    Size  Location     Type
+  1043 ;;  registerValu    2    0[COMRAM] unsigned short 
+  1044 ;; Auto vars:     Size  Location     Type
+  1045 ;;		None
+  1046 ;; Return value:  Size  Location     Type
+  1047 ;;                  1    wreg      void 
+  1048 ;; Registers used:
+  1049 ;;		wreg, status,2
+  1050 ;; Tracked objects:
+  1051 ;;		On entry : 0/0
+  1052 ;;		On exit  : 0/0
+  1053 ;;		Unchanged: 0/0
+  1054 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1055 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1056 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1057 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1058 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1059 ;;Total ram usage:        2 bytes
+  1060 ;; Hardware stack levels used: 1
+  1061 ;; This function calls:
+  1062 ;;		Nothing
+  1063 ;; This function is called by:
+  1064 ;;		_main
+  1065 ;; This function uses a non-reentrant model
+  1066 ;;
+  1067                           
+  1068                           	psect	text10
+  1069   01FE0C                     __ptext10:
+  1070                           	callstack 0
+  1071   01FE0C                     _PWM1_16BIT_SetSlice1Output1DutyCycleRegister:
+  1072                           	callstack 126
+  1073   01FE0C                     
+  1074                           ;mcc_generated_files/pwm1_16bit.c: 150: void PWM1_16BIT_SetSlice1Output1DutyCycleRegiste
+      +                          r(uint16_t registerValue);mcc_generated_files/pwm1_16bit.c: 151: {;mcc_generated_files/p
+      +                          wm1_16bit.c: 152:     PWM1S1P1L = (uint8_t)(registerValue);
+  1075   01FE0C  C50A  F46B         	movff	PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue,1131	;volatile
+  1076   01FE10                     
+  1077                           ;mcc_generated_files/pwm1_16bit.c: 153:     PWM1S1P1H = (uint8_t)(registerValue >> 8);
+  1078   01FE10  500B               	movf	(PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue+1)^(0+1280),w,c
+  1079   01FE12  6E6C               	movwf	108,c	;volatile
+  1080   01FE14  0012               	return		;funcret
+  1081   01FE16                     __end_of_PWM1_16BIT_SetSlice1Output1DutyCycleRegister:
+  1082                           	callstack 0
+  1083                           
+  1084 ;; *************** function _PWM1_16BIT_LoadBufferRegisters *****************
+  1085 ;; Defined at:
+  1086 ;;		line 162 in file "mcc_generated_files/pwm1_16bit.c"
+  1087 ;; Parameters:    Size  Location     Type
+  1088 ;;		None
+  1089 ;; Auto vars:     Size  Location     Type
+  1090 ;;		None
+  1091 ;; Return value:  Size  Location     Type
+  1092 ;;                  1    wreg      void 
+  1093 ;; Registers used:
+  1094 ;;		None
+  1095 ;; Tracked objects:
+  1096 ;;		On entry : 0/0
+  1097 ;;		On exit  : 0/0
+  1098 ;;		Unchanged: 0/0
+  1099 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1100 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1101 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1102 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1103 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1104 ;;Total ram usage:        0 bytes
+  1105 ;; Hardware stack levels used: 1
+  1106 ;; This function calls:
+  1107 ;;		Nothing
+  1108 ;; This function is called by:
+  1109 ;;		_main
+  1110 ;; This function uses a non-reentrant model
+  1111 ;;
+  1112                           
+  1113                           	psect	text11
+  1114   01FE02                     __ptext11:
+  1115                           	callstack 0
+  1116   01FE02                     _PWM1_16BIT_LoadBufferRegisters:
+  1117                           	callstack 126
+  1118   01FE02                     
+  1119                           ;mcc_generated_files/pwm1_16bit.c: 165:     PWM1CONbits.LD = 1;
+  1120   01FE02  8469               	bsf	105,2,c	;volatile
+  1121   01FE04  0012               	return		;funcret
+  1122   01FE06                     __end_of_PWM1_16BIT_LoadBufferRegisters:
+  1123                           	callstack 0
+  1124                           
+  1125 ;; *************** function _PWM1_16BIT_Enable *****************
+  1126 ;; Defined at:
+  1127 ;;		line 134 in file "mcc_generated_files/pwm1_16bit.c"
+  1128 ;; Parameters:    Size  Location     Type
+  1129 ;;		None
+  1130 ;; Auto vars:     Size  Location     Type
+  1131 ;;		None
+  1132 ;; Return value:  Size  Location     Type
+  1133 ;;                  1    wreg      void 
+  1134 ;; Registers used:
+  1135 ;;		status,2, status,0
+  1136 ;; Tracked objects:
+  1137 ;;		On entry : 0/0
+  1138 ;;		On exit  : 0/0
+  1139 ;;		Unchanged: 0/0
+  1140 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1141 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1142 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1143 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1144 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1145 ;;Total ram usage:        0 bytes
+  1146 ;; Hardware stack levels used: 1
+  1147 ;; This function calls:
+  1148 ;;		Nothing
+  1149 ;; This function is called by:
+  1150 ;;		_main
+  1151 ;; This function uses a non-reentrant model
+  1152 ;;
+  1153                           
+  1154                           	psect	text12
+  1155   01FDFE                     __ptext12:
+  1156                           	callstack 0
+  1157   01FDFE                     _PWM1_16BIT_Enable:
+  1158                           	callstack 126
+  1159   01FDFE                     
+  1160                           ;mcc_generated_files/pwm1_16bit.c: 136:     PWM1CON |= 0x80;
+  1161   01FDFE  8E69               	bsf	105,7,c	;volatile
+  1162   01FE00  0012               	return		;funcret
+  1163   01FE02                     __end_of_PWM1_16BIT_Enable:
+  1164                           	callstack 0
+  1165   000000                     
+  1166                           	psect	rparam
+  1167   000000                     
+  1168                           	psect	idloc
+  1169                           
+  1170                           ;Config register IDLOC0 @ 0x200000
+  1171                           ;	unspecified, using default values
+  1172   200000                     	org	2097152
+  1173   200000  0FFF               	dw	4095
+  1174                           
+  1175                           ;Config register IDLOC1 @ 0x200002
+  1176                           ;	unspecified, using default values
+  1177   200002                     	org	2097154
+  1178   200002  0FFF               	dw	4095
+  1179                           
+  1180                           ;Config register IDLOC2 @ 0x200004
+  1181                           ;	unspecified, using default values
+  1182   200004                     	org	2097156
+  1183   200004  0FFF               	dw	4095
+  1184                           
+  1185                           ;Config register IDLOC3 @ 0x200006
+  1186                           ;	unspecified, using default values
+  1187   200006                     	org	2097158
+  1188   200006  0FFF               	dw	4095
+  1189                           
+  1190                           ;Config register IDLOC4 @ 0x200008
+  1191                           ;	unspecified, using default values
+  1192   200008                     	org	2097160
+  1193   200008  0FFF               	dw	4095
+  1194                           
+  1195                           ;Config register IDLOC5 @ 0x20000A
+  1196                           ;	unspecified, using default values
+  1197   20000A                     	org	2097162
+  1198   20000A  0FFF               	dw	4095
+  1199                           
+  1200                           ;Config register IDLOC6 @ 0x20000C
+  1201                           ;	unspecified, using default values
+  1202   20000C                     	org	2097164
+  1203   20000C  0FFF               	dw	4095
+  1204                           
+  1205                           ;Config register IDLOC7 @ 0x20000E
+  1206                           ;	unspecified, using default values
+  1207   20000E                     	org	2097166
+  1208   20000E  0FFF               	dw	4095
+  1209                           
+  1210                           ;Config register IDLOC8 @ 0x200010
+  1211                           ;	unspecified, using default values
+  1212   200010                     	org	2097168
+  1213   200010  0FFF               	dw	4095
+  1214                           
+  1215                           ;Config register IDLOC9 @ 0x200012
+  1216                           ;	unspecified, using default values
+  1217   200012                     	org	2097170
+  1218   200012  0FFF               	dw	4095
+  1219                           
+  1220                           ;Config register IDLOC10 @ 0x200014
+  1221                           ;	unspecified, using default values
+  1222   200014                     	org	2097172
+  1223   200014  0FFF               	dw	4095
+  1224                           
+  1225                           ;Config register IDLOC11 @ 0x200016
+  1226                           ;	unspecified, using default values
+  1227   200016                     	org	2097174
+  1228   200016  0FFF               	dw	4095
+  1229                           
+  1230                           ;Config register IDLOC12 @ 0x200018
+  1231                           ;	unspecified, using default values
+  1232   200018                     	org	2097176
+  1233   200018  0FFF               	dw	4095
+  1234                           
+  1235                           ;Config register IDLOC13 @ 0x20001A
+  1236                           ;	unspecified, using default values
+  1237   20001A                     	org	2097178
+  1238   20001A  0FFF               	dw	4095
+  1239                           
+  1240                           ;Config register IDLOC14 @ 0x20001C
+  1241                           ;	unspecified, using default values
+  1242   20001C                     	org	2097180
+  1243   20001C  0FFF               	dw	4095
+  1244                           
+  1245                           ;Config register IDLOC15 @ 0x20001E
+  1246                           ;	unspecified, using default values
+  1247   20001E                     	org	2097182
+  1248   20001E  0FFF               	dw	4095
+  1249                           
+  1250                           ;Config register IDLOC16 @ 0x200020
+  1251                           ;	unspecified, using default values
+  1252   200020                     	org	2097184
+  1253   200020  0FFF               	dw	4095
+  1254                           
+  1255                           ;Config register IDLOC17 @ 0x200022
+  1256                           ;	unspecified, using default values
+  1257   200022                     	org	2097186
+  1258   200022  0FFF               	dw	4095
+  1259                           
+  1260                           ;Config register IDLOC18 @ 0x200024
+  1261                           ;	unspecified, using default values
+  1262   200024                     	org	2097188
+  1263   200024  0FFF               	dw	4095
+  1264                           
+  1265                           ;Config register IDLOC19 @ 0x200026
+  1266                           ;	unspecified, using default values
+  1267   200026                     	org	2097190
+  1268   200026  0FFF               	dw	4095
+  1269                           
+  1270                           ;Config register IDLOC20 @ 0x200028
+  1271                           ;	unspecified, using default values
+  1272   200028                     	org	2097192
+  1273   200028  0FFF               	dw	4095
+  1274                           
+  1275                           ;Config register IDLOC21 @ 0x20002A
+  1276                           ;	unspecified, using default values
+  1277   20002A                     	org	2097194
+  1278   20002A  0FFF               	dw	4095
+  1279                           
+  1280                           ;Config register IDLOC22 @ 0x20002C
+  1281                           ;	unspecified, using default values
+  1282   20002C                     	org	2097196
+  1283   20002C  0FFF               	dw	4095
+  1284                           
+  1285                           ;Config register IDLOC23 @ 0x20002E
+  1286                           ;	unspecified, using default values
+  1287   20002E                     	org	2097198
+  1288   20002E  0FFF               	dw	4095
+  1289                           
+  1290                           ;Config register IDLOC24 @ 0x200030
+  1291                           ;	unspecified, using default values
+  1292   200030                     	org	2097200
+  1293   200030  0FFF               	dw	4095
+  1294                           
+  1295                           ;Config register IDLOC25 @ 0x200032
+  1296                           ;	unspecified, using default values
+  1297   200032                     	org	2097202
+  1298   200032  0FFF               	dw	4095
+  1299                           
+  1300                           ;Config register IDLOC26 @ 0x200034
+  1301                           ;	unspecified, using default values
+  1302   200034                     	org	2097204
+  1303   200034  0FFF               	dw	4095
+  1304                           
+  1305                           ;Config register IDLOC27 @ 0x200036
+  1306                           ;	unspecified, using default values
+  1307   200036                     	org	2097206
+  1308   200036  0FFF               	dw	4095
+  1309                           
+  1310                           ;Config register IDLOC28 @ 0x200038
+  1311                           ;	unspecified, using default values
+  1312   200038                     	org	2097208
+  1313   200038  0FFF               	dw	4095
+  1314                           
+  1315                           ;Config register IDLOC29 @ 0x20003A
+  1316                           ;	unspecified, using default values
+  1317   20003A                     	org	2097210
+  1318   20003A  0FFF               	dw	4095
+  1319                           
+  1320                           ;Config register IDLOC30 @ 0x20003C
+  1321                           ;	unspecified, using default values
+  1322   20003C                     	org	2097212
+  1323   20003C  0FFF               	dw	4095
+  1324                           
+  1325                           ;Config register IDLOC31 @ 0x20003E
+  1326                           ;	unspecified, using default values
+  1327   20003E                     	org	2097214
+  1328   20003E  0FFF               	dw	4095
+  1329                           
+  1330                           	psect	config
+  1331                           
+  1332                           ;Config register CONFIG1 @ 0x300000
+  1333                           ;	External Oscillator Selection
+  1334                           ;	FEXTOSC = OFF, Oscillator not enabled
+  1335                           ;	Reset Oscillator Selection
+  1336                           ;	RSTOSC = HFINTOSC_1MHZ, HFINTOSC with HFFRQ = 4 MHz and CDIV = 4:1
+  1337   300000                     	org	3145728
+  1338   300000  EC                 	db	236
+  1339                           
+  1340                           ;Config register CONFIG2 @ 0x300001
+  1341                           ;	Clock out Enable bit
+  1342                           ;	CLKOUTEN = OFF, CLKOUT function is disabled
+  1343                           ;	PRLOCKED One-Way Set Enable bit
+  1344                           ;	PR1WAY = ON, PRLOCKED bit can be cleared and set only once
+  1345                           ;	Clock Switch Enable bit
+  1346                           ;	CSWEN = ON, Writing to NOSC and NDIV is allowed
+  1347                           ;	Fail-Safe Clock Monitor Enable bit
+  1348                           ;	FCMEN = ON, Fail-Safe Clock Monitor enabled
+  1349   300001                     	org	3145729
+  1350   300001  FF                 	db	255
+  1351                           
+  1352                           ;Config register CONFIG3 @ 0x300002
+  1353                           ;	MCLR Enable bit
+  1354                           ;	MCLRE = EXTMCLR, If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR
+  1355                           ;	Power-up timer selection bits
+  1356                           ;	PWRTS = PWRT_OFF, PWRT is disabled
+  1357                           ;	Multi-vector enable bit
+  1358                           ;	MVECEN = OFF, Interrupt contoller does not use vector table to prioritze interrupts
+  1359                           ;	IVTLOCK bit One-way set enable bit
+  1360                           ;	IVT1WAY = ON, IVTLOCKED bit can be cleared and set only once
+  1361                           ;	Low Power BOR Enable bit
+  1362                           ;	LPBOREN = OFF, Low-Power BOR disabled
+  1363                           ;	Brown-out Reset Enable bits
+  1364                           ;	BOREN = SBORDIS, Brown-out Reset enabled , SBOREN bit is ignored
+  1365   300002                     	org	3145730
+  1366   300002  F7                 	db	247
+  1367                           
+  1368                           ;Config register CONFIG4 @ 0x300003
+  1369                           ;	Brown-out Reset Voltage Selection bits
+  1370                           ;	BORV = VBOR_1P9, Brown-out Reset Voltage (VBOR) set to 1.9V
+  1371                           ;	ZCD Disable bit
+  1372                           ;	ZCD = OFF, ZCD module is disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCD
+      +                          CON
+  1373                           ;	PPSLOCK bit One-Way Set Enable bit
+  1374                           ;	PPS1WAY = ON, PPSLOCKED bit can be cleared and set only once; PPS registers remain loc
+      +                          ked after one clear/set cycle
+  1375                           ;	Stack Full/Underflow Reset Enable bit
+  1376                           ;	STVREN = ON, Stack full/underflow will cause Reset
+  1377                           ;	Low Voltage Programming Enable bit
+  1378                           ;	LVP = ON, Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE config
+      +                          uration bit is ignored
+  1379                           ;	Extended Instruction Set Enable bit
+  1380                           ;	XINST = OFF, Extended Instruction Set and Indexed Addressing Mode disabled
+  1381   300003                     	org	3145731
+  1382   300003  FF                 	db	255
+  1383                           
+  1384                           ;Config register CONFIG5 @ 0x300004
+  1385                           ;	WDT Period selection bits
+  1386                           ;	WDTCPS = WDTCPS_31, Divider ratio 1:65536; software control of WDTPS
+  1387                           ;	WDT operating mode
+  1388                           ;	WDTE = OFF, WDT Disabled; SWDTEN is ignored
+  1389   300004                     	org	3145732
+  1390   300004  9F                 	db	159
+  1391                           
+  1392                           ;Config register CONFIG6 @ 0x300005
+  1393                           ;	WDT Window Select bits
+  1394                           ;	WDTCWS = WDTCWS_7, window always open (100%); software control; keyed access not requi
+      +                          red
+  1395                           ;	WDT input clock selector
+  1396                           ;	WDTCCS = SC, Software Control
+  1397   300005                     	org	3145733
+  1398   300005  FF                 	db	255
+  1399                           
+  1400                           ;Config register CONFIG7 @ 0x300006
+  1401                           ;	Boot Block Size selection bits
+  1402                           ;	BBSIZE = BBSIZE_512, Boot Block size is 512 words
+  1403                           ;	Boot Block enable bit
+  1404                           ;	BBEN = OFF, Boot block disabled
+  1405                           ;	Storage Area Flash enable bit
+  1406                           ;	SAFEN = OFF, SAF disabled
+  1407                           ;	Background Debugger
+  1408                           ;	DEBUG = OFF, Background Debugger disabled
+  1409   300006                     	org	3145734
+  1410   300006  FF                 	db	255
+  1411                           
+  1412                           ;Config register CONFIG8 @ 0x300007
+  1413                           ;	Boot Block Write Protection bit
+  1414                           ;	WRTB = OFF, Boot Block not Write protected
+  1415                           ;	Configuration Register Write Protection bit
+  1416                           ;	WRTC = OFF, Configuration registers not Write protected
+  1417                           ;	Data EEPROM Write Protection bit
+  1418                           ;	WRTD = OFF, Data EEPROM not Write protected
+  1419                           ;	SAF Write protection bit
+  1420                           ;	WRTSAF = OFF, SAF not Write Protected
+  1421                           ;	Application Block write protection bit
+  1422                           ;	WRTAPP = OFF, Application Block not write protected
+  1423   300007                     	org	3145735
+  1424   300007  FF                 	db	255
+  1425                           
+  1426                           ; Padding undefined space
+  1427   300008                     	org	3145736
+  1428   300008  FF                 	db	255
+  1429                           
+  1430                           ;Config register CONFIG10 @ 0x300009
+  1431                           ;	PFM and Data EEPROM Code Protection bit
+  1432                           ;	CP = OFF, PFM and Data EEPROM code protection disabled
+  1433   300009                     	org	3145737
+  1434   300009  FF                 	db	255
+  1435                           tosu	equ	0x4FF
+  1436                           tosh	equ	0x4FE
+  1437                           tosl	equ	0x4FD
+  1438                           stkptr	equ	0x4FC
+  1439                           pclatu	equ	0x4FB
+  1440                           pclath	equ	0x4FA
+  1441                           pcl	equ	0x4F9
+  1442                           tblptru	equ	0x4F8
+  1443                           tblptrh	equ	0x4F7
+  1444                           tblptrl	equ	0x4F6
+  1445                           tablat	equ	0x4F5
+  1446                           prodh	equ	0x4F4
+  1447                           prodl	equ	0x4F3
+  1448                           indf0	equ	0x4EF
+  1449                           postinc0	equ	0x4EE
+  1450                           postdec0	equ	0x4ED
+  1451                           preinc0	equ	0x4EC
+  1452                           plusw0	equ	0x4EB
+  1453                           fsr0h	equ	0x4EA
+  1454                           fsr0l	equ	0x4E9
+  1455                           wreg	equ	0x4E8
+  1456                           indf1	equ	0x4E7
+  1457                           postinc1	equ	0x4E6
+  1458                           postdec1	equ	0x4E5
+  1459                           preinc1	equ	0x4E4
+  1460                           plusw1	equ	0x4E3
+  1461                           fsr1h	equ	0x4E2
+  1462                           fsr1l	equ	0x4E1
+  1463                           bsr	equ	0x4E0
+  1464                           indf2	equ	0x4DF
+  1465                           postinc2	equ	0x4DE
+  1466                           postdec2	equ	0x4DD
+  1467                           preinc2	equ	0x4DC
+  1468                           plusw2	equ	0x4DB
+  1469                           fsr2h	equ	0x4DA
+  1470                           fsr2l	equ	0x4D9
+  1471                           status	equ	0x4D8
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  9
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      7      16
+    BANK5           160      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15          256      0       0
+    BANK16          256      0       0
+    BANK17          256      0       0
+    BANK18          256      0       0
+    BANK19          256      0       0
+    BANK20          256      0       0
+    BANK21          256      0       0
+    BANK22          256      0       0
+    BANK23          256      0       0
+    BANK24          256      0       0
+    BANK25          256      0       0
+    BANK26          256      0       0
+    BANK27          256      0       0
+    BANK28          256      0       0
+    BANK29          256      0       0
+    BANK30          256      0       0
+    BANK31          256      0       0
+    BANK32          256      0       0
+    BANK33          256      0       0
+    BANK34          256      0       0
+    BANK35          256      0       0
+    BANK36          256      0       0
+
+Pointer List with Targets:
+
+    PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> PWM1_16BIT_Period_DefaultInterruptHandler(), 
+
+    PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> PWM1_16BIT_Slice1Output2_DefaultInterruptHandler(), 
+
+    PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> PWM1_16BIT_Slice1Output1_DefaultInterruptHandler(), 
+
+    PWM1_16BIT_Period_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> Absolute function(), PWM1_16BIT_Period_DefaultInterruptHandler(), 
+
+    PWM1_16BIT_Slice1Output2_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> Absolute function(), PWM1_16BIT_Slice1Output2_DefaultInterruptHandler(), 
+
+    PWM1_16BIT_Slice1Output1_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> Absolute function(), PWM1_16BIT_Slice1Output1_DefaultInterruptHandler(), 
+
+
+Critical Paths under _main in COMRAM
+
+    _PWM1_16BIT_Initialize->_PWM1_16BIT_Period_SetInterruptHandler
+    _PWM1_16BIT_Initialize->_PWM1_16BIT_Slice1Output1_SetInterruptHandler
+    _PWM1_16BIT_Initialize->_PWM1_16BIT_Slice1Output2_SetInterruptHandler
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Critical Paths under _main in BANK16
+
+    None.
+
+Critical Paths under _main in BANK17
+
+    None.
+
+Critical Paths under _main in BANK18
+
+    None.
+
+Critical Paths under _main in BANK19
+
+    None.
+
+Critical Paths under _main in BANK20
+
+    None.
+
+Critical Paths under _main in BANK21
+
+    None.
+
+Critical Paths under _main in BANK22
+
+    None.
+
+Critical Paths under _main in BANK23
+
+    None.
+
+Critical Paths under _main in BANK24
+
+    None.
+
+Critical Paths under _main in BANK25
+
+    None.
+
+Critical Paths under _main in BANK26
+
+    None.
+
+Critical Paths under _main in BANK27
+
+    None.
+
+Critical Paths under _main in BANK28
+
+    None.
+
+Critical Paths under _main in BANK29
+
+    None.
+
+Critical Paths under _main in BANK30
+
+    None.
+
+Critical Paths under _main in BANK31
+
+    None.
+
+Critical Paths under _main in BANK32
+
+    None.
+
+Critical Paths under _main in BANK33
+
+    None.
+
+Critical Paths under _main in BANK34
+
+    None.
+
+Critical Paths under _main in BANK35
+
+    None.
+
+Critical Paths under _main in BANK36
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 6     6      0     875
+                                              3 COMRAM     4     4      0
+                  _PWM1_16BIT_Enable
+              _PWM1_16BIT_Initialize
+     _PWM1_16BIT_LoadBufferRegisters
+_PWM1_16BIT_SetSlice1Output1DutyCycl
+     _PWM1_16BIT_WritePeriodRegister
+                  _SYSTEM_Initialize
+ ---------------------------------------------------------------------------------
+ (1) _SYSTEM_Initialize                                    0     0      0     294
+              _OSCILLATOR_Initialize
+             _PIN_MANAGER_Initialize
+                     _PMD_Initialize
+              _PWM1_16BIT_Initialize
+ ---------------------------------------------------------------------------------
+ (2) _PWM1_16BIT_Initialize                                0     0      0     294
+_PWM1_16BIT_Period_SetInterruptHandl
+_PWM1_16BIT_Slice1Output1_SetInterru
+_PWM1_16BIT_Slice1Output2_SetInterru
+ ---------------------------------------------------------------------------------
+ (3) _PWM1_16BIT_Slice1Output2_SetInterruptHandler         3     0      3      98
+                                              0 COMRAM     3     0      3
+ ---------------------------------------------------------------------------------
+ (3) _PWM1_16BIT_Slice1Output1_SetInterruptHandler         3     0      3      98
+                                              0 COMRAM     3     0      3
+ ---------------------------------------------------------------------------------
+ (3) _PWM1_16BIT_Period_SetInterruptHandler                3     0      3      98
+                                              0 COMRAM     3     0      3
+ ---------------------------------------------------------------------------------
+ (2) _PMD_Initialize                                       0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _PIN_MANAGER_Initialize                               0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _OSCILLATOR_Initialize                                0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _PWM1_16BIT_WritePeriodRegister                       2     0      2     120
+                                              0 COMRAM     2     0      2
+ ---------------------------------------------------------------------------------
+ (1) _PWM1_16BIT_SetSlice1Output1DutyCycleRegister         2     0      2     120
+                                              0 COMRAM     2     0      2
+ ---------------------------------------------------------------------------------
+ (1) _PWM1_16BIT_LoadBufferRegisters                       0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _PWM1_16BIT_Enable                                    0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _PWM1_16BIT_Enable
+   _PWM1_16BIT_Initialize
+     _PWM1_16BIT_Period_SetInterruptHandler
+     _PWM1_16BIT_Slice1Output1_SetInterruptHandler
+     _PWM1_16BIT_Slice1Output2_SetInterruptHandler
+   _PWM1_16BIT_LoadBufferRegisters
+   _PWM1_16BIT_SetSlice1Output1DutyCycleRegister
+   _PWM1_16BIT_WritePeriodRegister
+   _SYSTEM_Initialize
+     _OSCILLATOR_Initialize
+     _PIN_MANAGER_Initialize
+     _PMD_Initialize
+     _PWM1_16BIT_Initialize
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             400      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      7      10       1       16.8%
+STACK                0      0       0       2        0.0%
+DATA                 0      0      10       3        0.0%
+BITBANK5            A0      0       0       4        0.0%
+BANK5               A0      0       0       5        0.0%
+BITBANK6           100      0       0       6        0.0%
+BANK6              100      0       0       7        0.0%
+BITBANK7           100      0       0       8        0.0%
+BANK7              100      0       0       9        0.0%
+BITBANK8           100      0       0      10        0.0%
+BANK8              100      0       0      11        0.0%
+BITBANK9           100      0       0      12        0.0%
+BANK9              100      0       0      13        0.0%
+BITBANK10          100      0       0      14        0.0%
+BANK10             100      0       0      15        0.0%
+BITBANK11          100      0       0      16        0.0%
+BANK11             100      0       0      17        0.0%
+BITBANK12          100      0       0      18        0.0%
+BANK12             100      0       0      19        0.0%
+BITBANK13          100      0       0      20        0.0%
+BANK13             100      0       0      21        0.0%
+BITBANK14          100      0       0      22        0.0%
+BANK14             100      0       0      23        0.0%
+BITBANK15          100      0       0      24        0.0%
+BANK15             100      0       0      25        0.0%
+BITBANK16          100      0       0      26        0.0%
+BANK16             100      0       0      27        0.0%
+BITBANK17          100      0       0      28        0.0%
+BANK17             100      0       0      29        0.0%
+BITBANK18          100      0       0      30        0.0%
+BANK18             100      0       0      31        0.0%
+BITBANK19          100      0       0      32        0.0%
+BANK19             100      0       0      33        0.0%
+BITBANK20          100      0       0      34        0.0%
+BANK20             100      0       0      35        0.0%
+BITBANK21          100      0       0      36        0.0%
+BANK21             100      0       0      37        0.0%
+BITBANK22          100      0       0      38        0.0%
+BANK22             100      0       0      39        0.0%
+BITBANK23          100      0       0      40        0.0%
+BANK23             100      0       0      41        0.0%
+BITBANK24          100      0       0      42        0.0%
+BANK24             100      0       0      43        0.0%
+BITBANK25          100      0       0      44        0.0%
+BANK25             100      0       0      45        0.0%
+BITBANK26          100      0       0      46        0.0%
+BANK26             100      0       0      47        0.0%
+BITBANK27          100      0       0      48        0.0%
+BANK27             100      0       0      49        0.0%
+BITBANK28          100      0       0      50        0.0%
+BANK28             100      0       0      51        0.0%
+BITBANK29          100      0       0      52        0.0%
+BANK29             100      0       0      53        0.0%
+BITBANK30          100      0       0      54        0.0%
+BANK30             100      0       0      55        0.0%
+BITBANK31          100      0       0      56        0.0%
+BANK31             100      0       0      57        0.0%
+BITBANK32          100      0       0      58        0.0%
+BANK32             100      0       0      59        0.0%
+BITBANK33          100      0       0      60        0.0%
+BANK33             100      0       0      61        0.0%
+ABS                  0      0      10      62        0.0%
+BITBANK34          100      0       0      63        0.0%
+BANK34             100      0       0      64        0.0%
+BITBANK35          100      0       0      65        0.0%
+BANK35             100      0       0      66        0.0%
+BITBANK36          100      0       0      67        0.0%
+BANK36             100      0       0      68        0.0%
+BITBIGSFR_1        100      0       0      69        0.0%
+BIGRAM            1FFF      0       0      70        0.0%
+BITBIGSFRhhhhh      34      0       0      71        0.0%
+BITBIGSFRhhhhll      2      0       0      72        0.0%
+BITBIGSFRhhhllh      B      0       0      73        0.0%
+BITBIGSFRhhhllh      F      0       0      74        0.0%
+BITBIGSFRhhhllh     33      0       0      75        0.0%
+BITBIGSFRhhhllh     33      0       0      76        0.0%
+BITBIGSFRhhhllh      3      0       0      77        0.0%
+BITBIGSFRhhhllh      3      0       0      78        0.0%
+BITBIGSFRhhhlll      3      0       0      79        0.0%
+BITBIGSFRhhhlll      3      0       0      80        0.0%
+BITBIGSFRhhhlll      3      0       0      81        0.0%
+BITBIGSFRhhhlll    176      0       0      82        0.0%
+BITBIGSFRhhhlll     2E      0       0      83        0.0%
+BITBIGSFRhhhlll     45      0       0      84        0.0%
+BITBIGSFRhhhlll    15D      0       0      85        0.0%
+BITBIGSFRhhlh        1      0       0      86        0.0%
+BITBIGSFRhl          1      0       0      87        0.0%
+BITBIGSFRlhh        43      0       0      88        0.0%
+BITBIGSFRlhl         1      0       0      89        0.0%
+BITBIGSFRll         60      0       0      90        0.0%
+BIGSFR_1             0      0       0     200        0.0%
+BIGSFR               0      0       0     200        0.0%
+BITSFR_6             0      0       0     200        0.0%
+SFR_6                0      0       0     200        0.0%
+BITSFR_5             0      0       0     200        0.0%
+SFR_5                0      0       0     200        0.0%
+BITSFR_4             0      0       0     200        0.0%
+SFR_4                0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.40 build 20220703182018 
+Symbol Table                                                                                   Sat Dec 24 14:09:29 2022
+
+                                                          l42 FE76  
+                                                          l45 FE9A  
+                                                          l39 FE5A  
+                                                         l211 FE00  
+                                                         l220 FE14  
+                                                         l144 FFFA  
+                                                         l208 FF54  
+                                                         l217 FE1E  
+                                                         l241 FE3A  
+                                                         l226 FE04  
+                                                         l244 FE48  
+                                                         l247 FE2C  
+                                                         l960 FF56  
+                                                         l970 FF7E  
+                                                         l962 FF72  
+                                                         l980 FFD6  
+                                                         l972 FF86  
+                                                         l964 FF74  
+                                                         l990 FFE4  
+                                                         l982 FFD8  
+                                                         l974 FF8C  
+                                                         l966 FF76  
+                                                         l958 FE78  
+                                                         l992 FFE6  
+                                                         l984 FFDA  
+                                                         l976 FF8E  
+                                                         l968 FF7C  
+                                                         l994 FFE8  
+                                                         l986 FFE0  
+                                                         l978 FFD4  
+                                                         l996 FFEE  
+                                                         l988 FFE2  
+                                                         l998 FE5C  
+                            ??_PWM1_16BIT_LoadBufferRegisters 050A  
+                             ?_PWM1_16BIT_LoadBufferRegisters 050A  
+                                                        l1100 FF1C  
+                                                        l1110 FF50  
+                                                        l1102 FF1E  
+                                                        l1120 FE0C  
+                                                        l1104 FF20  
+                                                        l1112 FE4A  
+                                                        l1026 FDFE  
+                                                        l1122 FE10  
+                                                        l1106 FF30  
+                                                        l1114 FE56  
+                                                        l1130 FEB4  
+                                                        l1036 FE02  
+                                                        l1116 FE16  
+                                                        l1108 FF40  
+                                                        l1132 FEB4  
+                                                        l1124 FE9C  
+                                                        l1118 FE1A  
+                                                        l1134 FEB8  
+                                                        l1126 FEA4  
+                                                        l1136 FEC4  
+                                                        l1128 FEAC  
+                                                        l1090 FEDC  
+                                                        l1138 FED0  
+                                                        l1084 FE2E  
+                                                        l1092 FF14  
+                                                        l1086 FE3C  
+                                                        l1094 FF16  
+                                                        l1088 FE20  
+                                                        l1096 FF18  
+                                                        l1098 FF1A  
+                                                        _LATA 0004BE  
+                                                        _LATB 0004BF  
+                                                        _LATC 0004C0  
+                                                        _LATD 0004C1  
+                                                        _LATE 0004C2  
+                                                        _LATF 0004C3  
+                                                        _PMD0 000060  
+                                                        _PMD1 000061  
+                                                        _PMD3 000063  
+                                                        _PMD4 000064  
+                                                        _PMD5 000065  
+                                                        _PMD6 000066  
+                                                        _PMD7 000067  
+                                                        _PMD8 000068  
+                                                        _WPUA 000401  
+                                                        _WPUB 000409  
+                                                        _WPUC 000411  
+                                                        _WPUD 000419  
+                                                        _WPUE 000421  
+                                                        _WPUF 000429  
+                                                        _main FE9C  
+                                                        start FFFC  
+                                                ___param_bank 000000  
+   PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue 050A  
+                               __end_of_OSCILLATOR_Initialize FE78  
+                                                       ?_main 050A  
+                                      ?_PWM1_16BIT_Initialize 050A  
+                                                       _OSCEN 0000B3  
+                                                       _TRISA 0004C6  
+                                                       _TRISB 0004C7  
+                                                       _TRISC 0004C8  
+                                                       _TRISD 0004C9  
+                                                       _TRISE 0004CA  
+                                                       _TRISF 0004CB  
+            _PWM1_16BIT_Slice1Output1_DefaultInterruptHandler 000000  
+                      __end_of_PWM1_16BIT_WritePeriodRegister FE20  
+                              _PWM1_16BIT_WritePeriodRegister FE16  
+                                             __initialization FE06  
+                                                __end_of_main FEDC  
+                                                      ??_main 050D  
+                                               __activetblptr 000003  
+               __end_of_PWM1_16BIT_Period_SetInterruptHandler FE2E  
+                     ??_PWM1_16BIT_Period_SetInterruptHandler 050D  
+                      ?_PWM1_16BIT_Period_SetInterruptHandler 050A  
+                       _PWM1_16BIT_Period_SetInterruptHandler FE20  
+                                                      _ACTCON 0000AC  
+                                                      _ANSELA 000400  
+                                                      _ANSELB 000408  
+                                                      _ANSELC 000410  
+                                                      _ANSELD 000418  
+                                                      _ANSELE 000420  
+                                                      _ANSELF 000428  
+                                                      _RB1I2C 000289  
+                                                      _RB2I2C 000288  
+                                                      _RC3I2C 000287  
+                                                      _RC4I2C 000286  
+                                                      _RC0PPS 000211  
+                                                      _ODCONA 000402  
+                                                      _ODCONB 00040A  
+                                                      _ODCONC 000412  
+                                                      _ODCOND 00041A  
+                                                      _ODCONE 000422  
+                                                      _ODCONF 00042A  
+                                                      _INLVLA 000404  
+                                                      _INLVLB 00040C  
+                                                      _INLVLC 000414  
+                                                      _INLVLD 00041C  
+                                                      _INLVLE 000424  
+                                                      _INLVLF 00042C  
+                                                      _OSCFRQ 0000B1  
+                                                      isa$std 000001  
+                                              _PMD_Initialize FE78  
+       PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler 050A  
+PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler 050A  
+PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler 050A  
+                                           _SYSTEM_Initialize FE4A  
+                                                  __accesstop 0560  
+                                     __end_of__initialization FE06  
+                                          ?_SYSTEM_Initialize 050A  
+                                               ___rparam_used 000001  
+                                              __pcstackCOMRAM 050A  
+                                         ??_SYSTEM_Initialize 050D  
+                                      __end_of_PMD_Initialize FE9C  
+                                   __end_of_SYSTEM_Initialize FE5C  
+                                                  __pnvCOMRAM 0501  
+                   PWM1_16BIT_WritePeriodRegister@periodCount 050A  
+                                     ??_PWM1_16BIT_Initialize 050D  
+                                             ?_PMD_Initialize 050A  
+                                                     _OSCCON1 0000AD  
+                                                     _OSCCON3 0000AF  
+                                                     _OSCTUNE 0000B0  
+                                                     _PWM1CLK 000461  
+                                           _PWM1_16BIT_Enable FDFE  
+                                                     _PWM1GIE 000468  
+                                                     _PWM1CON 000469  
+                                                     _PWM1GIR 000467  
+                                                     _PWM1ERS 000460  
+                                                     _PWM1LDS 000462  
+                                                     _PWM1PRH 000464  
+                                                     _PWM1PRL 000463  
+                                                     _SLRCONA 000403  
+                                                     _SLRCONB 00040B  
+                                                     _SLRCONC 000413  
+                                                     _SLRCOND 00041B  
+                                                     _SLRCONE 000423  
+                                                     _SLRCONF 00042B  
+                                          ?_PWM1_16BIT_Enable 050A  
+                                         ??_PWM1_16BIT_Enable 050A  
+                                                     __Hparam 0000  
+                                                     __Lparam 0000  
+                                                     __pcinit FE06  
+                                                     __ramtop 2600  
+                                                     __ptext0 FE9C  
+                                                     __ptext1 FE4A  
+                                                     __ptext2 FEDC  
+                                                     __ptext3 FE3C  
+                                                     __ptext4 FE2E  
+                                                     __ptext5 FE20  
+                                                     __ptext6 FE78  
+                                                     __ptext7 FF56  
+                                                     __ptext8 FE5C  
+                                                     __ptext9 FE16  
+                            ??_PWM1_16BIT_WritePeriodRegister 050C  
+                             ?_PWM1_16BIT_WritePeriodRegister 050A  
+        __end_of_PWM1_16BIT_Slice1Output1_SetInterruptHandler FE3C  
+              ??_PWM1_16BIT_Slice1Output1_SetInterruptHandler 050D  
+               ?_PWM1_16BIT_Slice1Output1_SetInterruptHandler 050A  
+                _PWM1_16BIT_Slice1Output1_SetInterruptHandler FE2E  
+                                       _OSCILLATOR_Initialize FE5C  
+                                   __end_of_PWM1_16BIT_Enable FE02  
+                                    ??_PIN_MANAGER_Initialize 050A  
+                                        end_of_initialization FE06  
+            _PWM1_16BIT_Slice1Output2_DefaultInterruptHandler 000000  
+                                                   _PWM1S1CFG 00046A  
+                                                   _PWM1S1P1H 00046C  
+                                                   _PWM1S1P2H 00046E  
+                                                   _PWM1S1P1L 00046B  
+                                                   _PWM1S1P2L 00046D  
+                                                   _PWM1PIPOS 000466  
+                                                   _PWMIN0PPS 000257  
+                                      ?_OSCILLATOR_Initialize 050A  
+                                         start_initialization FE06  
+                                            ??_PMD_Initialize 050A  
+                               __end_of_PWM1_16BIT_Initialize FF56  
+                                      _PIN_MANAGER_Initialize FF56  
+                   _PWM1_16BIT_Period_DefaultInterruptHandler 000000  
+                                                    _PIE4bits 0004A2  
+                                                    _PIR4bits 0004B2  
+                                                    _PWM1CPRE 000465  
+        __end_of_PWM1_16BIT_SetSlice1Output1DutyCycleRegister FE16  
+              ??_PWM1_16BIT_SetSlice1Output1DutyCycleRegister 050C  
+               ?_PWM1_16BIT_SetSlice1Output1DutyCycleRegister 050A  
+                _PWM1_16BIT_SetSlice1Output1DutyCycleRegister FE0C  
+                      __end_of_PWM1_16BIT_LoadBufferRegisters FE06  
+                              _PWM1_16BIT_LoadBufferRegisters FE02  
+        __end_of_PWM1_16BIT_Slice1Output2_SetInterruptHandler FE4A  
+              ??_PWM1_16BIT_Slice1Output2_SetInterruptHandler 050D  
+               ?_PWM1_16BIT_Slice1Output2_SetInterruptHandler 050A  
+                _PWM1_16BIT_Slice1Output2_SetInterruptHandler FE3C  
+                                                   main@value 050F  
+                   _PWM1_16BIT_Slice1Output1_InterruptHandler 0507  
+                                                    __Hrparam 0000  
+                                                    __Lrparam 0000  
+                                     ??_OSCILLATOR_Initialize 050A  
+                                             main@periodCount 050D  
+                                                    __ptext10 FE0C  
+                                                    __ptext11 FE02  
+                                                    __ptext12 FDFE  
+                                                    isa$xinst 000000  
+                          _PWM1_16BIT_Period_InterruptHandler 0501  
+                                                 _PWM1GIEbits 000468  
+                                                 _PWM1CONbits 000469  
+                                                 _PWM1GIRbits 000467  
+                                     ?_PIN_MANAGER_Initialize 050A  
+                   _PWM1_16BIT_Slice1Output2_InterruptHandler 0504  
+                                       _PWM1_16BIT_Initialize FEDC  
+                              __end_of_PIN_MANAGER_Initialize FFFC  
